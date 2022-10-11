@@ -1,0 +1,4608 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Seleksi Fitur &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Crawling Data Twitter" href="crawling.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Pendahuluan
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="abstrak.html">
+   Crawling Data Abstrak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="crawling.html">
+   Crawling Data Twitter
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Seleksi Fitur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/seleksifitur.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fseleksifitur.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/seleksifitur.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Seleksi Fitur
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means">
+   K-means
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Seleksi Fitur</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Seleksi Fitur
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#k-means">
+   K-means
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="seleksi-fitur">
+<h1>Seleksi Fitur<a class="headerlink" href="#seleksi-fitur" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library pandas</span>
+<span class="o">!</span>pip install pandas
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: pandas in /usr/local/lib/python3.7/dist-packages (1.3.5)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2022.4)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (1.21.6)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.15.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library numpy</span>
+<span class="o">!</span>pip install numpy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (1.21.6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data_twitter</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/galuhseptiyani/tugas/main/datakenaikanbbm.csv&quot;</span><span class="p">)</span>
+
+<span class="n">data_twitter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-6a4a49e7-3a2f-484a-8ebd-dfe87ed0292d">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>tweet</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>@godham93740956 sampai akhir tahun 'anis' janj...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>@datanesia_id harga harga semakin naik semenja...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>@suhardi1110 Kenaikan BBM...amat sangat membeb...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BLT BBM sangat bermanfaat bagi masyarakat di t...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antisipasi Dampak Kenaikan BBM, Personil Sat P...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>Harga bahan pokok dipastikan aman di tengah ke...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>Pemerintah Kabupaten Situbondo, Jawa Timur, me...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>Pemerintah pastikan ketersediaan pangan pokok ...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>BLT itu solusi di tengah kenaikan harga BBM, k...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>Bhabinkamtibmas Kec.Pematang Jaya Polsek Pangk...</td>
+      <td>pro</td>
+    </tr>
+  </tbody>
+</table>
+<p>70 rows × 2 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6a4a49e7-3a2f-484a-8ebd-dfe87ed0292d')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-6a4a49e7-3a2f-484a-8ebd-dfe87ed0292d button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-6a4a49e7-3a2f-484a-8ebd-dfe87ed0292d');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library sastrawi</span>
+<span class="o">!</span>pip install sastrawi
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: sastrawi in /usr/local/lib/python3.7/dist-packages (1.0.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library swifter</span>
+<span class="o">!</span>pip install swifter
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: swifter in /usr/local/lib/python3.7/dist-packages (1.3.4)
+Requirement already satisfied: bleach&gt;=3.1.1 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.0.1)
+Requirement already satisfied: dask[dataframe]&gt;=2.10.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (2022.2.0)
+Requirement already satisfied: ipywidgets&gt;=7.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (7.7.1)
+Requirement already satisfied: psutil&gt;=5.6.6 in /usr/local/lib/python3.7/dist-packages (from swifter) (5.9.2)
+Requirement already satisfied: pandas&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.3.5)
+Requirement already satisfied: parso&gt;0.4.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (0.8.3)
+Requirement already satisfied: tqdm&gt;=4.33.0 in /usr/local/lib/python3.7/dist-packages (from swifter) (4.64.1)
+Requirement already satisfied: cloudpickle&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from swifter) (1.5.0)
+Requirement already satisfied: six&gt;=1.9.0 in /usr/local/lib/python3.7/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (1.15.0)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach&gt;=3.1.1-&gt;swifter) (0.5.1)
+Requirement already satisfied: fsspec&gt;=0.6.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (2022.8.2)
+Requirement already satisfied: pyyaml&gt;=5.3.1 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (6.0)
+Requirement already satisfied: partd&gt;=0.3.10 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.3.0)
+Requirement already satisfied: toolz&gt;=0.8.2 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (0.12.0)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (21.3)
+Requirement already satisfied: numpy&gt;=1.18 in /usr/local/lib/python3.7/dist-packages (from dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.21.6)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.0.3)
+Requirement already satisfied: ipython&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (7.9.0)
+Requirement already satisfied: ipython-genutils~=0.2.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: ipykernel&gt;=4.5.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.4)
+Requirement already satisfied: widgetsnbextension~=3.6.0 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (3.6.1)
+Requirement already satisfied: traitlets&gt;=4.3.1 in /usr/local/lib/python3.7/dist-packages (from ipywidgets&gt;=7.0.0-&gt;swifter) (5.1.1)
+Requirement already satisfied: jupyter-client in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.1.12)
+Requirement already satisfied: tornado&gt;=4.2 in /usr/local/lib/python3.7/dist-packages (from ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.2)
+Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.6.1)
+Requirement already satisfied: pexpect in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.8.0)
+Requirement already satisfied: pickleshare in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.5)
+Requirement already satisfied: backcall in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.0)
+Requirement already satisfied: prompt-toolkit&lt;2.1.0,&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.0.10)
+Requirement already satisfied: jedi&gt;=0.10 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.1)
+Requirement already satisfied: setuptools&gt;=18.5 in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (57.4.0)
+Requirement already satisfied: decorator in /usr/local/lib/python3.7/dist-packages (from ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.4.2)
+Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging&gt;=20.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (3.0.9)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.0-&gt;swifter) (2022.4)
+Requirement already satisfied: locket in /usr/local/lib/python3.7/dist-packages (from partd&gt;=0.3.10-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter) (1.0.0)
+Requirement already satisfied: wcwidth in /usr/local/lib/python3.7/dist-packages (from prompt-toolkit&lt;2.1.0,&gt;=2.0.0-&gt;ipython&gt;=4.0.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.5)
+Requirement already satisfied: notebook&gt;=4.4.1 in /usr/local/lib/python3.7/dist-packages (from widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.3.1)
+Requirement already satisfied: jinja2 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.1.2)
+Requirement already satisfied: Send2Trash in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.8.0)
+Requirement already satisfied: nbconvert in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (6.5.4)
+Requirement already satisfied: jupyter-core&gt;=4.4.0 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.11.1)
+Requirement already satisfied: terminado&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.13.3)
+Requirement already satisfied: nbformat in /usr/local/lib/python3.7/dist-packages (from notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.6.1)
+Requirement already satisfied: pyzmq&gt;=13 in /usr/local/lib/python3.7/dist-packages (from jupyter-client-&gt;ipykernel&gt;=4.5.1-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (23.2.1)
+Requirement already satisfied: ptyprocess in /usr/local/lib/python3.7/dist-packages (from terminado&gt;=0.8.1-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from jinja2-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.0.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: entrypoints&gt;=0.2.2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.4)
+Requirement already satisfied: lxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.9.1)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.7.1)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.6.3)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.8.4)
+Requirement already satisfied: jupyterlab-pygments in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.2.2)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.5.13)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.0)
+Requirement already satisfied: tinycss2 in /usr/local/lib/python3.7/dist-packages (from nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.1.1)
+Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.7/dist-packages (from nbclient&gt;=0.5.0-&gt;nbconvert-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (1.5.6)
+Requirement already satisfied: jsonschema&gt;=2.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.2.0)
+Requirement already satisfied: importlib-metadata&gt;=3.6 in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (5.0.0)
+Requirement already satisfied: fastjsonschema in /usr/local/lib/python3.7/dist-packages (from nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (2.16.2)
+Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (3.8.1)
+Requirement already satisfied: typing-extensions&gt;=3.6.4 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=3.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (4.1.1)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (0.18.1)
+Requirement already satisfied: attrs&gt;=17.4.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&gt;=2.6-&gt;nbformat-&gt;notebook&gt;=4.4.1-&gt;widgetsnbextension~=3.6.0-&gt;ipywidgets&gt;=7.0.0-&gt;swifter) (21.4.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     @godham93740956 sampai akhir tahun &#39;anis&#39; janj...
+1     @datanesia_id harga harga semakin naik semenja...
+2     @suhardi1110 kenaikan bbm...amat sangat membeb...
+3     blt bbm sangat bermanfaat bagi masyarakat di t...
+4     antisipasi dampak kenaikan bbm, personil sat p...
+                            ...                        
+65    harga bahan pokok dipastikan aman di tengah ke...
+66    pemerintah kabupaten situbondo, jawa timur, me...
+67    pemerintah pastikan ketersediaan pangan pokok ...
+68    blt itu solusi di tengah kenaikan harga bbm, k...
+69    bhabinkamtibmas kec.pematang jaya polsek pangk...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#install library nltk</span>
+<span class="o">!</span>pip install nltk
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: nltk in /usr/local/lib/python3.7/dist-packages (3.7)
+Requirement already satisfied: regex&gt;=2021.8.3 in /usr/local/lib/python3.7/dist-packages (from nltk) (2022.6.2)
+Requirement already satisfied: click in /usr/local/lib/python3.7/dist-packages (from nltk) (7.1.2)
+Requirement already satisfied: joblib in /usr/local/lib/python3.7/dist-packages (from nltk) (1.2.0)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from nltk) (4.64.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span> 
+<span class="kn">import</span> <span class="nn">re</span> <span class="c1">#regex library</span>
+<span class="c1"># import word_tokenize &amp; FreqDist from NLTK</span>
+
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">word_tokenize</span> 
+<span class="kn">from</span> <span class="nn">nltk.probability</span> <span class="kn">import</span> <span class="n">FreqDist</span>
+
+<span class="c1"># ------ Tokenizing ---------</span>
+
+<span class="k">def</span> <span class="nf">remove_special</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># remove tab, new line, ans back slice</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">t&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">u&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">f&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">r&#39;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="c1"># remove non ASCII (emoticon, chinese word, .etc)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">,</span> <span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span>
+    <span class="c1"># remove mention, link, hashtag</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;([@#][A-Za-z0-9]+)|(\w+:\/\/\S+)&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="c1"># remove incomplete URL</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+                
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_special</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     sampai akhir tahun &#39;anis&#39; janji tdk akan ada k...
+1     _id harga harga semakin naik semenjak kenaikan...
+2     kenaikan bbm...amat sangat membebani rakyat......
+3     blt bbm sangat bermanfaat bagi masyarakat di t...
+4     antisipasi dampak kenaikan bbm, personil sat p...
+                            ...                        
+65    harga bahan pokok dipastikan aman di tengah ke...
+66    pemerintah kabupaten situbondo, jawa timur, me...
+67    pemerintah pastikan ketersediaan pangan pokok ...
+68    blt itu solusi di tengah kenaikan harga bbm, k...
+69    bhabinkamtibmas kec.pematang jaya polsek pangk...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove number</span>
+<span class="k">def</span> <span class="nf">remove_number</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span>  <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\d+&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_number</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     sampai akhir tahun &#39;anis&#39; janji tdk akan ada k...
+1     _id harga harga semakin naik semenjak kenaikan...
+2     kenaikan bbm...amat sangat membebani rakyat......
+3     blt bbm sangat bermanfaat bagi masyarakat di t...
+4     antisipasi dampak kenaikan bbm, personil sat p...
+                            ...                        
+65    harga bahan pokok dipastikan aman di tengah ke...
+66    pemerintah kabupaten situbondo, jawa timur, me...
+67    pemerintah pastikan ketersediaan pangan pokok ...
+68    blt itu solusi di tengah kenaikan harga bbm, k...
+69    bhabinkamtibmas kec.pematang jaya polsek pangk...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove punctuation</span>
+<span class="k">def</span> <span class="nf">remove_punctuation</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_punctuation</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     sampai akhir tahun anis janji tdk akan ada ken...
+1     id harga harga semakin naik semenjak kenaikan ...
+2     kenaikan bbmamat sangat membebani rakyatsegera...
+3     blt bbm sangat bermanfaat bagi masyarakat di t...
+4     antisipasi dampak kenaikan bbm personil sat po...
+                            ...                        
+65    harga bahan pokok dipastikan aman di tengah ke...
+66    pemerintah kabupaten situbondo jawa timur meng...
+67    pemerintah pastikan ketersediaan pangan pokok ...
+68    blt itu solusi di tengah kenaikan harga bbm ku...
+69    bhabinkamtibmas kecpematang jaya polsek pangka...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#remove whitespace leading &amp; trailing</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_LT</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_LT</span><span class="p">)</span>
+
+
+<span class="c1">#remove multiple whitespace into single whitespace</span>
+<span class="k">def</span> <span class="nf">remove_whitespace_multiple</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_whitespace_multiple</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     sampai akhir tahun anis janji tdk akan ada ken...
+1     id harga harga semakin naik semenjak kenaikan ...
+2     kenaikan bbmamat sangat membebani rakyatsegera...
+3     blt bbm sangat bermanfaat bagi masyarakat di t...
+4     antisipasi dampak kenaikan bbm personil sat po...
+                            ...                        
+65    harga bahan pokok dipastikan aman di tengah ke...
+66    pemerintah kabupaten situbondo jawa timur meng...
+67    pemerintah pastikan ketersediaan pangan pokok ...
+68    blt itu solusi di tengah kenaikan harga bbm ku...
+69    bhabinkamtibmas kecpematang jaya polsek pangka...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># remove single char</span>
+<span class="k">def</span> <span class="nf">remove_singl_char</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\b[a-zA-Z]\b&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_singl_char</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     sampai akhir tahun anis janji tdk akan ada ken...
+1     id harga harga semakin naik semenjak kenaikan ...
+2     kenaikan bbmamat sangat membebani rakyatsegera...
+3     blt bbm sangat bermanfaat bagi masyarakat di t...
+4     antisipasi dampak kenaikan bbm personil sat po...
+                            ...                        
+65    harga bahan pokok dipastikan aman di tengah ke...
+66    pemerintah kabupaten situbondo jawa timur meng...
+67    pemerintah pastikan ketersediaan pangan pokok ...
+68    blt itu solusi di tengah kenaikan harga bbm ku...
+69    bhabinkamtibmas kecpematang jaya polsek pangka...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NLTK word Tokenize </span>
+<span class="k">def</span> <span class="nf">word_tokenize_wrapper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize_wrapper</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [sampai, akhir, tahun, anis, janji, tdk, akan,...
+1     [id, harga, harga, semakin, naik, semenjak, ke...
+2     [kenaikan, bbmamat, sangat, membebani, rakyats...
+3     [blt, bbm, sangat, bermanfaat, bagi, masyaraka...
+4     [antisipasi, dampak, kenaikan, bbm, personil, ...
+                            ...                        
+65    [harga, bahan, pokok, dipastikan, aman, di, te...
+66    [pemerintah, kabupaten, situbondo, jawa, timur...
+67    [pemerintah, pastikan, ketersediaan, pangan, p...
+68    [blt, itu, solusi, di, tengah, kenaikan, harga...
+69    [bhabinkamtibmas, kecpematang, jaya, polsek, p...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+
+<span class="c1">#Menghapus Stopword dari list token</span>
+<span class="k">def</span> <span class="nf">stopwords_removal</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">list_stopwords</span><span class="p">]</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">stopwords_removal</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [anis, janji, tdk, kenaikan, bbm, subsidiperta...
+1           [id, harga, harga, semenjak, kenaikan, bbm]
+2     [kenaikan, bbmamat, membebani, rakyatsegera, t...
+3     [blt, bbm, bermanfaat, masyarakat, kenaikan, h...
+4     [antisipasi, dampak, kenaikan, bbm, personil, ...
+                            ...                        
+65    [harga, bahan, pokok, aman, kenaikan, harga, b...
+66    [pemerintah, kabupaten, situbondo, jawa, timur...
+67    [pemerintah, pastikan, ketersediaan, pangan, p...
+68    [blt, solusi, kenaikan, harga, bbm, kudu, didu...
+69    [bhabinkamtibmas, kecpematang, jaya, polsek, p...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>steaming</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">Sastrawi.Stemmer.StemmerFactory</span> <span class="kn">import</span> <span class="n">StemmerFactory</span>
+<span class="kn">import</span> <span class="nn">swifter</span>
+
+
+<span class="c1"># create stemmer</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+
+<span class="c1"># stemmed</span>
+<span class="k">def</span> <span class="nf">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+
+<span class="n">term_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">document</span> <span class="ow">in</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">term</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+            <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">term_dict</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">term_dict</span><span class="p">:</span>
+    <span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="o">=</span> <span class="n">stemmed_wrapper</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">term</span><span class="p">,</span><span class="s2">&quot;:&quot;</span> <span class="p">,</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">])</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">term_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># apply stemmed term to dataframe</span>
+<span class="k">def</span> <span class="nf">get_stemmed_term</span><span class="p">(</span><span class="n">document</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">term_dict</span><span class="p">[</span><span class="n">term</span><span class="p">]</span> <span class="k">for</span> <span class="n">term</span> <span class="ow">in</span> <span class="n">document</span><span class="p">]</span>
+
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">swifter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_stemmed_term</span><span class="p">)</span>
+<span class="n">data_twitter</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>432
+------------------------
+anis : anis
+janji : janji
+tdk : tdk
+kenaikan : naik
+bbm : bbm
+subsidipertalite : subsidipertalite
+tp : tp
+september : september
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>udah : udah
+rb : rb
+id : id
+harga : harga
+semenjak : semenjak
+bbmamat : bbmamat
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>membebani : beban
+rakyatsegera : rakyatsegera
+turunkan : turun
+blt : blt
+bermanfaat : manfaat
+masyarakat : masyarakat
+daerah : daerah
+istimewa : istimewa
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>yogyakarta : yogyakarta
+antisipasi : antisipasi
+dampak : dampak
+personil : personil
+sat : sat
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>polairud : polairud
+sambangi : sambang
+spbn : spbn
+pelabuhan : labuh
+perikanan : ikan
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pengambengansambil : pengambengansambil
+dialogis : dialogis
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dengankaryawan : dengankaryawan
+pastikan : pasti
+tarif : tarif
+angkutan : angkut
+kota : kota
+pemkab : pemkab
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>blora : blora
+bantuan : bantu
+subsidi : subsidi
+simak : simak
+selengkapnya : lengkap
+contoh : contoh
+bukti : bukti
+kepura : pura
+puraan : pura
+politisi : politis
+mengaku : aku
+partai : partai
+cilik : cilik
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pdip : pdip
+licik : licik
+sok : sok
+kagetanpadahal : kagetanpadahal
+pelopor : pelopor
+yg : yg
+rakyat : rakyat
+amp : amp
+mahasiswa : mahasiswa
+berhari : hari
+tertawa : tertawa
+senang : 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>senang
+lihat : lihat
+demosusah : demosusah
+dukung : dukung
+jg : jg
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>anjayyy : anjayyy
+aksi : aksi
+demo : demo
+tolak : tolak
+pemkot : pemkot
+bogor : bogor
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>voucer : voucer
+pembelian : beli
+sopir : sopir
+angkot : angkot
+pengemudi : kemudi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ojol : ojol
+gerakan : gera
+nasional : nasional
+pembela : bela
+gnpr : gnpr
+kawasan : kawasan
+patung : patung
+kuda : kuda
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>jakarta : jakarta
+okt : okt
+tuntutan : tuntut
+hargaharga : hargaharga
+tegakkan : tegak
+supremasi : supremasi
+hukum : hukum
+dorong : dorong
+inflasi : inflasi
+malang : malang
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>reskrim : reskrim
+polresta : polresta
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>deli : deli
+serdang : serdang
+bagikan : bagi
+bansos : bansos
+terdampak : dampak
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kenaikanbbm : kenaikanbbm
+pemerintah : perintah
+ketersediaan : sedia
+pangan : pangan
+pokok : pokok
+ditengah : tengah
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kalimantan : kalimantan
+dpd : dpd
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>apdesi : apdesi
+jawa : jawa
+barat : barat
+instruksikan : instruksi
+kades : kades
+kawal : kawal
+penyaluran : salur
+seruan : seru
+batalkan : batal
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>omnibuslaw : omnibuslaw
+uu : uu
+cipta : cipta
+kerja : kerja
+naikan : naik
+upah : upah
+wib : wib
+lokasi : lokasi
+istana : istana
+negara : negara
+sejuta : juta
+buruh : buruh
+bahan : bahan
+ruu : ruu
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kuhp : kuhp
+cabut : cabut
+dll : dll
+gara : gara
+okelah : oke
+ga : ga
+ya : ya
+gmn : gmn
+lg : lg
+terpaksa : paksa
+beli : beli
+harganya : harga
+aq : aq
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pake : pake
+pertalite : pertalite
+isi : isi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>full : full
+boros : boros
+buangeeet : buangeeet
+fokus : fokus
+pengadaan : ada
+mobil : mobil
+listrik : listrik
+memberatkan : berat
+ekonomi : ekonomi
+ojek : ojek
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>online : online
+pengguna : guna
+beralih : alih
+moda : moda
+transportasi : transportasi
+pendapatan : dapat
+terjepit : jepit
+imbas : imbas
+poster : poster
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>jokowi : jokowi
+mundur : mundur
+pemberian : beri
+meringankan : ringan
+beban : beban
+penumpang : tumpang
+jauhlah : jauh
+horeee : horeee
+rp : rp
+liter : liter
+jenis : jenis
+dituding : tuding
+bikin : bikin
+menteri : menteri
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bumn : bumn
+erick : erick
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>thohir : thohir
+kunjungan : kunjung
+rangka : rangka
+program : program
+solusi : solusi
+nelayan : nelayan
+jl : jl
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nambangan : nambangan
+perak : perak
+desa : desa
+kedung : kedung
+cowek : cowek
+bulak : bulak
+digagas : gagas
+utk : utk
+membantu : bantu
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ktober : ktober
+dipatung : patung
+langkah : langkah
+diambil : ambil
+bakar : bakar
+minyak : minyak
+menargetkan : target
+direalisasikan : realisasi
+indonesia : indonesia
+personel : personel
+polsek : polsek
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lumbis : lumbis
+melaksanakan : laksana
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>himbauan : himbauan
+warga : warga
+wilayah : wilayah
+kecamatan : camat
+aktivitas : aktivitas
+berhatihati : berhatihati
+menjaga : jaga
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kondusifitas : kondusifitas
+aman : aman
+melewati : lewat
+perubahan : ubah
+situasi : situasi
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pasca : pasca
+jelang : jelang
+pemilu : milu
+cemas : cemas
+pakok : pakok
+info : info
+dasar : dasar
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>didepan : depan
+kantor : kantor
+dprd : dprd
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sumatera : sumatera
+utara : utara
+pentol : pentol
+favorit : favorit
+gue : gue
+seribu : ribu
+pertusuk : tusuk
+dapet : dapet
+tusuk : tusuk
+aja : aja
+sesedih : sedih
+serius : serius
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>harha : harha
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>jambi : jambi
+kompas : kompas
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sulawesi : sulawesi
+menimbulkan : timbul
+protes : protes
+pengamat : amat
+hemat : hemat
+triliun : triliun
+extra : extra
+menit : menit
+mahasiswanya : mahasiswa
+massa : massa
+macet : macet
+maluku : malu
+baku : baku
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kele : kele
+bersatu : satu
+sebulan : bulan
+solar : solar
+diprotes : protes
+muncul : muncul
+informasi : informasi
+kualitas : kualitas
+bersubsidi : subsidi
+turun : turun
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dibarengi : bareng
+peralihan : alih
+pelanggan : langgan
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spbu : spbu
+swasta : swasta
+mengerek : kerek
+laju : laju
+negeri : negeri
+menyadari : sadar
+kebijakan : bijak
+bantalan : bantal
+alokasi : alokasi
+dana : dana
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>perlindungan : lindung
+sosial : sosial
+disiapkan : siap
+anggaran : anggar
+pamulang : pamulang
+pemantauan : pantau
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pertamina : pertamina
+wilkum : wilkum
+terkendali : kendali
+senin : senin
+konsumen : konsumen
+menggugat : gugat
+nya : nya
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kwalitasnya : kwalitasnya
+rendah : rendah
+penyesuaian : sesuai
+kebaikan : baik
+umat : umat
+dah : dah
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>geruduk : geruduk
+pilpres : pilpres
+peduli : peduli
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>polda : polda
+kaltim : kaltim
+paket : paket
+sembako : sembako
+jabar : jabar
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pelototi : pelotot
+radar : radar
+bandung : bandung
+bhabinkamtibmas : bhabinkamtibmas
+kel : kel
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>padangmatinggi : padangmatinggi
+aiptu : aiptu
+agus : agus
+salim : salim
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pane : pane
+kamtibmas : kamtibmas
+kepulauan : pulau
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>riau : riau
+disdagin : disdagin
+menggelar : gelar
+pasar : pasar
+murah : murah
+disambut : sambut
+terbukti : bukti
+penyelenggaraan : selenggara
+transaksi : transaksi
+menembus : tembus
+angka : angka
+miliar : miliar
+abu : abu
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abdurahman : abdurahman
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abdullah : abdullah
+bin : bin
+masud : masud
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>radyiallahuanhu : radyiallahuanhu
+biasakanlah : biasa
+kerana : rana
+dgn : dgn
+kebiasaan : biasa
+shahih : shahih
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mushannafabdurazaq : mushannafabdurazaq
+aceh : aceh
+pedagang : dagang
+mendukung : dukung
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>update : update
+bela : bela
+oktober : oktober
+pandemi : pandemi
+taking : taking
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>your : your
+job : job
+kredit : kredit
+ditawarkan : tawar
+mudah : mudah
+bunga : bunga
+persen : persen
+persyaratan : syarat
+gampang : gampang
+kesadaran : sadar
+investasi : investasi
+properties : properties
+imbangi : imbang
+properti : properti
+kebutuhan : butuh
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>market : market
+demand : demand
+kendaraan : kendara
+terdorong : dorong
+momentum : momentum
+akun : akun
+petugas : tugas
+provokator : provokator
+memecah : pecah
+belah : belah
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>rkyt : rkyt
+pengalihan : alih
+isu : isu
+jutaan : juta
+rugikan : rugi
+tercekik : cekik
+sgl : sgl
+organisasi : organisasi
+tergabung : gabung
+aliansi : aliansi
+aasb : aasb
+gelar : gelar
+unjuk : unjuk
+menolak : tolak
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>menuntut : tuntut
+salam : salam
+kabupaten : kabupaten
+situbondo : situbondo
+timur : timur
+mengalokasikan : alokasi
+langsung : langsung
+tunai : tunai
+upaya : upaya
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>menekan : tekan
+kudu : kudu
+didukung : dukung
+penuh : penuh
+nih : nih
+banten : banten
+kecpematang : kecpematang
+jaya : jaya
+pangkalan :
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> pangkal
+susu : susu
+brigadir : brigadir
+rico : rico
+surya : surya
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ardana : ardana
+sh : sh
+kepala : kepala
+pulau : pulau
+kampai : kampai
+babinsa : babinsa
+serang : serang
+hilir : hilir
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>berkordinasi : berkordinasi
+bertukar : tukar
+pendapat : dapat
+{&#39;anis&#39;: &#39;anis&#39;, &#39;janji&#39;: &#39;janji&#39;, &#39;tdk&#39;: &#39;tdk&#39;, &#39;kenaikan&#39;: &#39;naik&#39;, &#39;bbm&#39;: &#39;bbm&#39;, &#39;subsidipertalite&#39;: &#39;subsidipertalite&#39;, &#39;tp&#39;: &#39;tp&#39;, &#39;september&#39;: &#39;september&#39;, &#39;udah&#39;: &#39;udah&#39;, &#39;rb&#39;: &#39;rb&#39;, &#39;id&#39;: &#39;id&#39;, &#39;harga&#39;: &#39;harga&#39;, &#39;semenjak&#39;: &#39;semenjak&#39;, &#39;bbmamat&#39;: &#39;bbmamat&#39;, &#39;membebani&#39;: &#39;beban&#39;, &#39;rakyatsegera&#39;: &#39;rakyatsegera&#39;, &#39;turunkan&#39;: &#39;turun&#39;, &#39;blt&#39;: &#39;blt&#39;, &#39;bermanfaat&#39;: &#39;manfaat&#39;, &#39;masyarakat&#39;: &#39;masyarakat&#39;, &#39;daerah&#39;: &#39;daerah&#39;, &#39;istimewa&#39;: &#39;istimewa&#39;, &#39;yogyakarta&#39;: &#39;yogyakarta&#39;, &#39;antisipasi&#39;: &#39;antisipasi&#39;, &#39;dampak&#39;: &#39;dampak&#39;, &#39;personil&#39;: &#39;personil&#39;, &#39;sat&#39;: &#39;sat&#39;, &#39;polairud&#39;: &#39;polairud&#39;, &#39;sambangi&#39;: &#39;sambang&#39;, &#39;spbn&#39;: &#39;spbn&#39;, &#39;pelabuhan&#39;: &#39;labuh&#39;, &#39;perikanan&#39;: &#39;ikan&#39;, &#39;pengambengansambil&#39;: &#39;pengambengansambil&#39;, &#39;dialogis&#39;: &#39;dialogis&#39;, &#39;dengankaryawan&#39;: &#39;dengankaryawan&#39;, &#39;pastikan&#39;: &#39;pasti&#39;, &#39;tarif&#39;: &#39;tarif&#39;, &#39;angkutan&#39;: &#39;angkut&#39;, &#39;kota&#39;: &#39;kota&#39;, &#39;pemkab&#39;: &#39;pemkab&#39;, &#39;blora&#39;: &#39;blora&#39;, &#39;bantuan&#39;: &#39;bantu&#39;, &#39;subsidi&#39;: &#39;subsidi&#39;, &#39;simak&#39;: &#39;simak&#39;, &#39;selengkapnya&#39;: &#39;lengkap&#39;, &#39;contoh&#39;: &#39;contoh&#39;, &#39;bukti&#39;: &#39;bukti&#39;, &#39;kepura&#39;: &#39;pura&#39;, &#39;puraan&#39;: &#39;pura&#39;, &#39;politisi&#39;: &#39;politis&#39;, &#39;mengaku&#39;: &#39;aku&#39;, &#39;partai&#39;: &#39;partai&#39;, &#39;cilik&#39;: &#39;cilik&#39;, &#39;pdip&#39;: &#39;pdip&#39;, &#39;licik&#39;: &#39;licik&#39;, &#39;sok&#39;: &#39;sok&#39;, &#39;kagetanpadahal&#39;: &#39;kagetanpadahal&#39;, &#39;pelopor&#39;: &#39;pelopor&#39;, &#39;yg&#39;: &#39;yg&#39;, &#39;rakyat&#39;: &#39;rakyat&#39;, &#39;amp&#39;: &#39;amp&#39;, &#39;mahasiswa&#39;: &#39;mahasiswa&#39;, &#39;berhari&#39;: &#39;hari&#39;, &#39;tertawa&#39;: &#39;tertawa&#39;, &#39;senang&#39;: &#39;senang&#39;, &#39;lihat&#39;: &#39;lihat&#39;, &#39;demosusah&#39;: &#39;demosusah&#39;, &#39;dukung&#39;: &#39;dukung&#39;, &#39;jg&#39;: &#39;jg&#39;, &#39;anjayyy&#39;: &#39;anjayyy&#39;, &#39;aksi&#39;: &#39;aksi&#39;, &#39;demo&#39;: &#39;demo&#39;, &#39;tolak&#39;: &#39;tolak&#39;, &#39;pemkot&#39;: &#39;pemkot&#39;, &#39;bogor&#39;: &#39;bogor&#39;, &#39;voucer&#39;: &#39;voucer&#39;, &#39;pembelian&#39;: &#39;beli&#39;, &#39;sopir&#39;: &#39;sopir&#39;, &#39;angkot&#39;: &#39;angkot&#39;, &#39;pengemudi&#39;: &#39;kemudi&#39;, &#39;ojol&#39;: &#39;ojol&#39;, &#39;gerakan&#39;: &#39;gera&#39;, &#39;nasional&#39;: &#39;nasional&#39;, &#39;pembela&#39;: &#39;bela&#39;, &#39;gnpr&#39;: &#39;gnpr&#39;, &#39;kawasan&#39;: &#39;kawasan&#39;, &#39;patung&#39;: &#39;patung&#39;, &#39;kuda&#39;: &#39;kuda&#39;, &#39;jakarta&#39;: &#39;jakarta&#39;, &#39;okt&#39;: &#39;okt&#39;, &#39;tuntutan&#39;: &#39;tuntut&#39;, &#39;hargaharga&#39;: &#39;hargaharga&#39;, &#39;tegakkan&#39;: &#39;tegak&#39;, &#39;supremasi&#39;: &#39;supremasi&#39;, &#39;hukum&#39;: &#39;hukum&#39;, &#39;dorong&#39;: &#39;dorong&#39;, &#39;inflasi&#39;: &#39;inflasi&#39;, &#39;malang&#39;: &#39;malang&#39;, &#39;reskrim&#39;: &#39;reskrim&#39;, &#39;polresta&#39;: &#39;polresta&#39;, &#39;deli&#39;: &#39;deli&#39;, &#39;serdang&#39;: &#39;serdang&#39;, &#39;bagikan&#39;: &#39;bagi&#39;, &#39;bansos&#39;: &#39;bansos&#39;, &#39;terdampak&#39;: &#39;dampak&#39;, &#39;kenaikanbbm&#39;: &#39;kenaikanbbm&#39;, &#39;pemerintah&#39;: &#39;perintah&#39;, &#39;ketersediaan&#39;: &#39;sedia&#39;, &#39;pangan&#39;: &#39;pangan&#39;, &#39;pokok&#39;: &#39;pokok&#39;, &#39;ditengah&#39;: &#39;tengah&#39;, &#39;kalimantan&#39;: &#39;kalimantan&#39;, &#39;dpd&#39;: &#39;dpd&#39;, &#39;apdesi&#39;: &#39;apdesi&#39;, &#39;jawa&#39;: &#39;jawa&#39;, &#39;barat&#39;: &#39;barat&#39;, &#39;instruksikan&#39;: &#39;instruksi&#39;, &#39;kades&#39;: &#39;kades&#39;, &#39;kawal&#39;: &#39;kawal&#39;, &#39;penyaluran&#39;: &#39;salur&#39;, &#39;seruan&#39;: &#39;seru&#39;, &#39;batalkan&#39;: &#39;batal&#39;, &#39;omnibuslaw&#39;: &#39;omnibuslaw&#39;, &#39;uu&#39;: &#39;uu&#39;, &#39;cipta&#39;: &#39;cipta&#39;, &#39;kerja&#39;: &#39;kerja&#39;, &#39;naikan&#39;: &#39;naik&#39;, &#39;upah&#39;: &#39;upah&#39;, &#39;wib&#39;: &#39;wib&#39;, &#39;lokasi&#39;: &#39;lokasi&#39;, &#39;istana&#39;: &#39;istana&#39;, &#39;negara&#39;: &#39;negara&#39;, &#39;sejuta&#39;: &#39;juta&#39;, &#39;buruh&#39;: &#39;buruh&#39;, &#39;bahan&#39;: &#39;bahan&#39;, &#39;ruu&#39;: &#39;ruu&#39;, &#39;kuhp&#39;: &#39;kuhp&#39;, &#39;cabut&#39;: &#39;cabut&#39;, &#39;dll&#39;: &#39;dll&#39;, &#39;gara&#39;: &#39;gara&#39;, &#39;okelah&#39;: &#39;oke&#39;, &#39;ga&#39;: &#39;ga&#39;, &#39;ya&#39;: &#39;ya&#39;, &#39;gmn&#39;: &#39;gmn&#39;, &#39;lg&#39;: &#39;lg&#39;, &#39;terpaksa&#39;: &#39;paksa&#39;, &#39;beli&#39;: &#39;beli&#39;, &#39;harganya&#39;: &#39;harga&#39;, &#39;aq&#39;: &#39;aq&#39;, &#39;pake&#39;: &#39;pake&#39;, &#39;pertalite&#39;: &#39;pertalite&#39;, &#39;isi&#39;: &#39;isi&#39;, &#39;full&#39;: &#39;full&#39;, &#39;boros&#39;: &#39;boros&#39;, &#39;buangeeet&#39;: &#39;buangeeet&#39;, &#39;fokus&#39;: &#39;fokus&#39;, &#39;pengadaan&#39;: &#39;ada&#39;, &#39;mobil&#39;: &#39;mobil&#39;, &#39;listrik&#39;: &#39;listrik&#39;, &#39;memberatkan&#39;: &#39;berat&#39;, &#39;ekonomi&#39;: &#39;ekonomi&#39;, &#39;ojek&#39;: &#39;ojek&#39;, &#39;online&#39;: &#39;online&#39;, &#39;pengguna&#39;: &#39;guna&#39;, &#39;beralih&#39;: &#39;alih&#39;, &#39;moda&#39;: &#39;moda&#39;, &#39;transportasi&#39;: &#39;transportasi&#39;, &#39;pendapatan&#39;: &#39;dapat&#39;, &#39;terjepit&#39;: &#39;jepit&#39;, &#39;imbas&#39;: &#39;imbas&#39;, &#39;poster&#39;: &#39;poster&#39;, &#39;jokowi&#39;: &#39;jokowi&#39;, &#39;mundur&#39;: &#39;mundur&#39;, &#39;pemberian&#39;: &#39;beri&#39;, &#39;meringankan&#39;: &#39;ringan&#39;, &#39;beban&#39;: &#39;beban&#39;, &#39;penumpang&#39;: &#39;tumpang&#39;, &#39;jauhlah&#39;: &#39;jauh&#39;, &#39;horeee&#39;: &#39;horeee&#39;, &#39;rp&#39;: &#39;rp&#39;, &#39;liter&#39;: &#39;liter&#39;, &#39;jenis&#39;: &#39;jenis&#39;, &#39;dituding&#39;: &#39;tuding&#39;, &#39;bikin&#39;: &#39;bikin&#39;, &#39;menteri&#39;: &#39;menteri&#39;, &#39;bumn&#39;: &#39;bumn&#39;, &#39;erick&#39;: &#39;erick&#39;, &#39;thohir&#39;: &#39;thohir&#39;, &#39;kunjungan&#39;: &#39;kunjung&#39;, &#39;rangka&#39;: &#39;rangka&#39;, &#39;program&#39;: &#39;program&#39;, &#39;solusi&#39;: &#39;solusi&#39;, &#39;nelayan&#39;: &#39;nelayan&#39;, &#39;jl&#39;: &#39;jl&#39;, &#39;nambangan&#39;: &#39;nambangan&#39;, &#39;perak&#39;: &#39;perak&#39;, &#39;desa&#39;: &#39;desa&#39;, &#39;kedung&#39;: &#39;kedung&#39;, &#39;cowek&#39;: &#39;cowek&#39;, &#39;bulak&#39;: &#39;bulak&#39;, &#39;digagas&#39;: &#39;gagas&#39;, &#39;utk&#39;: &#39;utk&#39;, &#39;membantu&#39;: &#39;bantu&#39;, &#39;ktober&#39;: &#39;ktober&#39;, &#39;dipatung&#39;: &#39;patung&#39;, &#39;langkah&#39;: &#39;langkah&#39;, &#39;diambil&#39;: &#39;ambil&#39;, &#39;bakar&#39;: &#39;bakar&#39;, &#39;minyak&#39;: &#39;minyak&#39;, &#39;menargetkan&#39;: &#39;target&#39;, &#39;direalisasikan&#39;: &#39;realisasi&#39;, &#39;indonesia&#39;: &#39;indonesia&#39;, &#39;personel&#39;: &#39;personel&#39;, &#39;polsek&#39;: &#39;polsek&#39;, &#39;lumbis&#39;: &#39;lumbis&#39;, &#39;melaksanakan&#39;: &#39;laksana&#39;, &#39;himbauan&#39;: &#39;himbauan&#39;, &#39;warga&#39;: &#39;warga&#39;, &#39;wilayah&#39;: &#39;wilayah&#39;, &#39;kecamatan&#39;: &#39;camat&#39;, &#39;aktivitas&#39;: &#39;aktivitas&#39;, &#39;berhatihati&#39;: &#39;berhatihati&#39;, &#39;menjaga&#39;: &#39;jaga&#39;, &#39;kondusifitas&#39;: &#39;kondusifitas&#39;, &#39;aman&#39;: &#39;aman&#39;, &#39;melewati&#39;: &#39;lewat&#39;, &#39;perubahan&#39;: &#39;ubah&#39;, &#39;situasi&#39;: &#39;situasi&#39;, &#39;pasca&#39;: &#39;pasca&#39;, &#39;jelang&#39;: &#39;jelang&#39;, &#39;pemilu&#39;: &#39;milu&#39;, &#39;cemas&#39;: &#39;cemas&#39;, &#39;pakok&#39;: &#39;pakok&#39;, &#39;info&#39;: &#39;info&#39;, &#39;dasar&#39;: &#39;dasar&#39;, &#39;didepan&#39;: &#39;depan&#39;, &#39;kantor&#39;: &#39;kantor&#39;, &#39;dprd&#39;: &#39;dprd&#39;, &#39;sumatera&#39;: &#39;sumatera&#39;, &#39;utara&#39;: &#39;utara&#39;, &#39;pentol&#39;: &#39;pentol&#39;, &#39;favorit&#39;: &#39;favorit&#39;, &#39;gue&#39;: &#39;gue&#39;, &#39;seribu&#39;: &#39;ribu&#39;, &#39;pertusuk&#39;: &#39;tusuk&#39;, &#39;dapet&#39;: &#39;dapet&#39;, &#39;tusuk&#39;: &#39;tusuk&#39;, &#39;aja&#39;: &#39;aja&#39;, &#39;sesedih&#39;: &#39;sedih&#39;, &#39;serius&#39;: &#39;serius&#39;, &#39;harha&#39;: &#39;harha&#39;, &#39;jambi&#39;: &#39;jambi&#39;, &#39;kompas&#39;: &#39;kompas&#39;, &#39;sulawesi&#39;: &#39;sulawesi&#39;, &#39;menimbulkan&#39;: &#39;timbul&#39;, &#39;protes&#39;: &#39;protes&#39;, &#39;pengamat&#39;: &#39;amat&#39;, &#39;hemat&#39;: &#39;hemat&#39;, &#39;triliun&#39;: &#39;triliun&#39;, &#39;extra&#39;: &#39;extra&#39;, &#39;menit&#39;: &#39;menit&#39;, &#39;mahasiswanya&#39;: &#39;mahasiswa&#39;, &#39;massa&#39;: &#39;massa&#39;, &#39;macet&#39;: &#39;macet&#39;, &#39;maluku&#39;: &#39;malu&#39;, &#39;baku&#39;: &#39;baku&#39;, &#39;kele&#39;: &#39;kele&#39;, &#39;bersatu&#39;: &#39;satu&#39;, &#39;sebulan&#39;: &#39;bulan&#39;, &#39;solar&#39;: &#39;solar&#39;, &#39;diprotes&#39;: &#39;protes&#39;, &#39;muncul&#39;: &#39;muncul&#39;, &#39;informasi&#39;: &#39;informasi&#39;, &#39;kualitas&#39;: &#39;kualitas&#39;, &#39;bersubsidi&#39;: &#39;subsidi&#39;, &#39;turun&#39;: &#39;turun&#39;, &#39;dibarengi&#39;: &#39;bareng&#39;, &#39;peralihan&#39;: &#39;alih&#39;, &#39;pelanggan&#39;: &#39;langgan&#39;, &#39;spbu&#39;: &#39;spbu&#39;, &#39;swasta&#39;: &#39;swasta&#39;, &#39;mengerek&#39;: &#39;kerek&#39;, &#39;laju&#39;: &#39;laju&#39;, &#39;negeri&#39;: &#39;negeri&#39;, &#39;menyadari&#39;: &#39;sadar&#39;, &#39;kebijakan&#39;: &#39;bijak&#39;, &#39;bantalan&#39;: &#39;bantal&#39;, &#39;alokasi&#39;: &#39;alokasi&#39;, &#39;dana&#39;: &#39;dana&#39;, &#39;perlindungan&#39;: &#39;lindung&#39;, &#39;sosial&#39;: &#39;sosial&#39;, &#39;disiapkan&#39;: &#39;siap&#39;, &#39;anggaran&#39;: &#39;anggar&#39;, &#39;pamulang&#39;: &#39;pamulang&#39;, &#39;pemantauan&#39;: &#39;pantau&#39;, &#39;pertamina&#39;: &#39;pertamina&#39;, &#39;wilkum&#39;: &#39;wilkum&#39;, &#39;terkendali&#39;: &#39;kendali&#39;, &#39;senin&#39;: &#39;senin&#39;, &#39;konsumen&#39;: &#39;konsumen&#39;, &#39;menggugat&#39;: &#39;gugat&#39;, &#39;nya&#39;: &#39;nya&#39;, &#39;kwalitasnya&#39;: &#39;kwalitasnya&#39;, &#39;rendah&#39;: &#39;rendah&#39;, &#39;penyesuaian&#39;: &#39;sesuai&#39;, &#39;kebaikan&#39;: &#39;baik&#39;, &#39;umat&#39;: &#39;umat&#39;, &#39;dah&#39;: &#39;dah&#39;, &#39;geruduk&#39;: &#39;geruduk&#39;, &#39;pilpres&#39;: &#39;pilpres&#39;, &#39;peduli&#39;: &#39;peduli&#39;, &#39;polda&#39;: &#39;polda&#39;, &#39;kaltim&#39;: &#39;kaltim&#39;, &#39;paket&#39;: &#39;paket&#39;, &#39;sembako&#39;: &#39;sembako&#39;, &#39;jabar&#39;: &#39;jabar&#39;, &#39;pelototi&#39;: &#39;pelotot&#39;, &#39;radar&#39;: &#39;radar&#39;, &#39;bandung&#39;: &#39;bandung&#39;, &#39;bhabinkamtibmas&#39;: &#39;bhabinkamtibmas&#39;, &#39;kel&#39;: &#39;kel&#39;, &#39;padangmatinggi&#39;: &#39;padangmatinggi&#39;, &#39;aiptu&#39;: &#39;aiptu&#39;, &#39;agus&#39;: &#39;agus&#39;, &#39;salim&#39;: &#39;salim&#39;, &#39;pane&#39;: &#39;pane&#39;, &#39;kamtibmas&#39;: &#39;kamtibmas&#39;, &#39;kepulauan&#39;: &#39;pulau&#39;, &#39;riau&#39;: &#39;riau&#39;, &#39;disdagin&#39;: &#39;disdagin&#39;, &#39;menggelar&#39;: &#39;gelar&#39;, &#39;pasar&#39;: &#39;pasar&#39;, &#39;murah&#39;: &#39;murah&#39;, &#39;disambut&#39;: &#39;sambut&#39;, &#39;terbukti&#39;: &#39;bukti&#39;, &#39;penyelenggaraan&#39;: &#39;selenggara&#39;, &#39;transaksi&#39;: &#39;transaksi&#39;, &#39;menembus&#39;: &#39;tembus&#39;, &#39;angka&#39;: &#39;angka&#39;, &#39;miliar&#39;: &#39;miliar&#39;, &#39;abu&#39;: &#39;abu&#39;, &#39;abdurahman&#39;: &#39;abdurahman&#39;, &#39;abdullah&#39;: &#39;abdullah&#39;, &#39;bin&#39;: &#39;bin&#39;, &#39;masud&#39;: &#39;masud&#39;, &#39;radyiallahuanhu&#39;: &#39;radyiallahuanhu&#39;, &#39;biasakanlah&#39;: &#39;biasa&#39;, &#39;kerana&#39;: &#39;rana&#39;, &#39;dgn&#39;: &#39;dgn&#39;, &#39;kebiasaan&#39;: &#39;biasa&#39;, &#39;shahih&#39;: &#39;shahih&#39;, &#39;mushannafabdurazaq&#39;: &#39;mushannafabdurazaq&#39;, &#39;aceh&#39;: &#39;aceh&#39;, &#39;pedagang&#39;: &#39;dagang&#39;, &#39;mendukung&#39;: &#39;dukung&#39;, &#39;update&#39;: &#39;update&#39;, &#39;bela&#39;: &#39;bela&#39;, &#39;oktober&#39;: &#39;oktober&#39;, &#39;pandemi&#39;: &#39;pandemi&#39;, &#39;taking&#39;: &#39;taking&#39;, &#39;your&#39;: &#39;your&#39;, &#39;job&#39;: &#39;job&#39;, &#39;kredit&#39;: &#39;kredit&#39;, &#39;ditawarkan&#39;: &#39;tawar&#39;, &#39;mudah&#39;: &#39;mudah&#39;, &#39;bunga&#39;: &#39;bunga&#39;, &#39;persen&#39;: &#39;persen&#39;, &#39;persyaratan&#39;: &#39;syarat&#39;, &#39;gampang&#39;: &#39;gampang&#39;, &#39;kesadaran&#39;: &#39;sadar&#39;, &#39;investasi&#39;: &#39;investasi&#39;, &#39;properties&#39;: &#39;properties&#39;, &#39;imbangi&#39;: &#39;imbang&#39;, &#39;properti&#39;: &#39;properti&#39;, &#39;kebutuhan&#39;: &#39;butuh&#39;, &#39;market&#39;: &#39;market&#39;, &#39;demand&#39;: &#39;demand&#39;, &#39;kendaraan&#39;: &#39;kendara&#39;, &#39;terdorong&#39;: &#39;dorong&#39;, &#39;momentum&#39;: &#39;momentum&#39;, &#39;akun&#39;: &#39;akun&#39;, &#39;petugas&#39;: &#39;tugas&#39;, &#39;provokator&#39;: &#39;provokator&#39;, &#39;memecah&#39;: &#39;pecah&#39;, &#39;belah&#39;: &#39;belah&#39;, &#39;rkyt&#39;: &#39;rkyt&#39;, &#39;pengalihan&#39;: &#39;alih&#39;, &#39;isu&#39;: &#39;isu&#39;, &#39;jutaan&#39;: &#39;juta&#39;, &#39;rugikan&#39;: &#39;rugi&#39;, &#39;tercekik&#39;: &#39;cekik&#39;, &#39;sgl&#39;: &#39;sgl&#39;, &#39;organisasi&#39;: &#39;organisasi&#39;, &#39;tergabung&#39;: &#39;gabung&#39;, &#39;aliansi&#39;: &#39;aliansi&#39;, &#39;aasb&#39;: &#39;aasb&#39;, &#39;gelar&#39;: &#39;gelar&#39;, &#39;unjuk&#39;: &#39;unjuk&#39;, &#39;menolak&#39;: &#39;tolak&#39;, &#39;menuntut&#39;: &#39;tuntut&#39;, &#39;salam&#39;: &#39;salam&#39;, &#39;kabupaten&#39;: &#39;kabupaten&#39;, &#39;situbondo&#39;: &#39;situbondo&#39;, &#39;timur&#39;: &#39;timur&#39;, &#39;mengalokasikan&#39;: &#39;alokasi&#39;, &#39;langsung&#39;: &#39;langsung&#39;, &#39;tunai&#39;: &#39;tunai&#39;, &#39;upaya&#39;: &#39;upaya&#39;, &#39;menekan&#39;: &#39;tekan&#39;, &#39;kudu&#39;: &#39;kudu&#39;, &#39;didukung&#39;: &#39;dukung&#39;, &#39;penuh&#39;: &#39;penuh&#39;, &#39;nih&#39;: &#39;nih&#39;, &#39;banten&#39;: &#39;banten&#39;, &#39;kecpematang&#39;: &#39;kecpematang&#39;, &#39;jaya&#39;: &#39;jaya&#39;, &#39;pangkalan&#39;: &#39;pangkal&#39;, &#39;susu&#39;: &#39;susu&#39;, &#39;brigadir&#39;: &#39;brigadir&#39;, &#39;rico&#39;: &#39;rico&#39;, &#39;surya&#39;: &#39;surya&#39;, &#39;ardana&#39;: &#39;ardana&#39;, &#39;sh&#39;: &#39;sh&#39;, &#39;kepala&#39;: &#39;kepala&#39;, &#39;pulau&#39;: &#39;pulau&#39;, &#39;kampai&#39;: &#39;kampai&#39;, &#39;babinsa&#39;: &#39;babinsa&#39;, &#39;serang&#39;: &#39;serang&#39;, &#39;hilir&#39;: &#39;hilir&#39;, &#39;berkordinasi&#39;: &#39;berkordinasi&#39;, &#39;bertukar&#39;: &#39;tukar&#39;, &#39;pendapat&#39;: &#39;dapat&#39;}
+------------------------
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "3ae1aa327d5e4a26b2b0e9ced89f0433"}
+</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     [anis, janji, tdk, naik, bbm, subsidipertalite...
+1               [id, harga, harga, semenjak, naik, bbm]
+2     [naik, bbmamat, beban, rakyatsegera, turun, ha...
+3     [blt, bbm, manfaat, masyarakat, naik, harga, b...
+4     [antisipasi, dampak, naik, bbm, personil, sat,...
+                            ...                        
+65    [harga, bahan, pokok, aman, naik, harga, bbm, ...
+66    [perintah, kabupaten, situbondo, jawa, timur, ...
+67    [perintah, pasti, sedia, pangan, pokok, naik, ...
+68    [blt, solusi, naik, harga, bbm, kudu, dukung, ...
+69    [bhabinkamtibmas, kecpematang, jaya, polsek, p...
+Name: tweet, Length: 70, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_twitter</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;preprocessing.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
+<span class="c1">#Membuat Dataframe</span>
+<span class="n">dataTextPre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;preprocessing.csv&#39;</span><span class="p">)</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">min_df</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">bag</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataTextPre</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">])</span>
+<span class="n">dataTextPre</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-26fb21e6-a014-469f-84cb-06c166706e83">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>tweet</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>['anis', 'janji', 'tdk', 'naik', 'bbm', 'subsi...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>['id', 'harga', 'harga', 'semenjak', 'naik', '...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>['naik', 'bbmamat', 'beban', 'rakyatsegera', '...</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>['blt', 'bbm', 'manfaat', 'masyarakat', 'naik'...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>['antisipasi', 'dampak', 'naik', 'bbm', 'perso...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>65</td>
+      <td>['harga', 'bahan', 'pokok', 'aman', 'naik', 'h...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>66</td>
+      <td>['perintah', 'kabupaten', 'situbondo', 'jawa',...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>67</td>
+      <td>['perintah', 'pasti', 'sedia', 'pangan', 'poko...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>68</td>
+      <td>['blt', 'solusi', 'naik', 'harga', 'bbm', 'kud...</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>69</td>
+      <td>['bhabinkamtibmas', 'kecpematang', 'jaya', 'po...</td>
+      <td>pro</td>
+    </tr>
+  </tbody>
+</table>
+<p>70 rows × 3 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-26fb21e6-a014-469f-84cb-06c166706e83')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-26fb21e6-a014-469f-84cb-06c166706e83 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-26fb21e6-a014-469f-84cb-06c166706e83');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">matrik_vsm</span><span class="o">=</span><span class="n">bag</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="c1">#print(matrik_vsm)</span>
+<span class="n">matrik_vsm</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(70, 403)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]))</span>
+<span class="c1">#dfb =pd.DataFrame(data=matrik_vsm,index=df,columns=[a])</span>
+<span class="n">dataTF</span> <span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">matrik_vsm</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrik_vsm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="p">)),</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">a</span><span class="p">])</span>
+<span class="n">dataTF</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>70
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-328cccbc-c45b-44d6-aa65-7ecd8986f005">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>aasb</th>
+      <th>abdullah</th>
+      <th>abdurahman</th>
+      <th>abu</th>
+      <th>aceh</th>
+      <th>ada</th>
+      <th>agus</th>
+      <th>aiptu</th>
+      <th>aja</th>
+      <th>aksi</th>
+      <th>...</th>
+      <th>uu</th>
+      <th>voucer</th>
+      <th>warga</th>
+      <th>wib</th>
+      <th>wilayah</th>
+      <th>wilkum</th>
+      <th>ya</th>
+      <th>yg</th>
+      <th>yogyakarta</th>
+      <th>your</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>70 rows × 403 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-328cccbc-c45b-44d6-aa65-7ecd8986f005')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-328cccbc-c45b-44d6-aa65-7ecd8986f005 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-328cccbc-c45b-44d6-aa65-7ecd8986f005');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="k-means">
+<h1>K-means<a class="headerlink" href="#k-means" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
+<span class="n">kmeans</span> <span class="o">=</span><span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dataTF</span><span class="p">)</span>
+<span class="n">prediksi</span><span class="o">=</span><span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dataTF</span><span class="p">)</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+
+<span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">prediksi</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Cluster&quot;</span><span class="p">])</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-b67ea173-6ccc-4d4f-bba0-2fcc5f53d05d">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Cluster</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>70 rows × 1 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-b67ea173-6ccc-4d4f-bba0-2fcc5f53d05d')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-b67ea173-6ccc-4d4f-bba0-2fcc5f53d05d button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-b67ea173-6ccc-4d4f-bba0-2fcc5f53d05d');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datalabel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/galuhseptiyani/tugas/main/datakenaikanbbm.csv&#39;</span><span class="p">)</span>
+<span class="n">dataJurnal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataTF</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">datalabel</span><span class="p">[</span><span class="s2">&quot;label&quot;</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dataJurnal</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9993be01-7df7-4737-a4b3-18fceeccfe2c">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>(aasb,)</th>
+      <th>(abdullah,)</th>
+      <th>(abdurahman,)</th>
+      <th>(abu,)</th>
+      <th>(aceh,)</th>
+      <th>(ada,)</th>
+      <th>(agus,)</th>
+      <th>(aiptu,)</th>
+      <th>(aja,)</th>
+      <th>(aksi,)</th>
+      <th>...</th>
+      <th>(voucer,)</th>
+      <th>(warga,)</th>
+      <th>(wib,)</th>
+      <th>(wilayah,)</th>
+      <th>(wilkum,)</th>
+      <th>(ya,)</th>
+      <th>(yg,)</th>
+      <th>(yogyakarta,)</th>
+      <th>(your,)</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>kontra</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>pro</td>
+    </tr>
+  </tbody>
+</table>
+<p>70 rows × 404 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9993be01-7df7-4737-a4b3-18fceeccfe2c')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-9993be01-7df7-4737-a4b3-18fceeccfe2c button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-9993be01-7df7-4737-a4b3-18fceeccfe2c');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataJurnal</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;kontra&#39;, &#39;pro&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataJurnal</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 70 entries, 0 to 69
+Columns: 404 entries, (&#39;aasb&#39;,) to label
+dtypes: int64(403), object(1)
+memory usage: 221.1+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Train test split to avoid overfitting</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">dataJurnal</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
+    <span class="n">dataJurnal</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
+    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_train</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-6d60614b-abc4-4a45-8dfb-152970366de1">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>(aasb,)</th>
+      <th>(abdullah,)</th>
+      <th>(abdurahman,)</th>
+      <th>(abu,)</th>
+      <th>(aceh,)</th>
+      <th>(ada,)</th>
+      <th>(agus,)</th>
+      <th>(aiptu,)</th>
+      <th>(aja,)</th>
+      <th>(aksi,)</th>
+      <th>...</th>
+      <th>(uu,)</th>
+      <th>(voucer,)</th>
+      <th>(warga,)</th>
+      <th>(wib,)</th>
+      <th>(wilayah,)</th>
+      <th>(wilkum,)</th>
+      <th>(ya,)</th>
+      <th>(yg,)</th>
+      <th>(yogyakarta,)</th>
+      <th>(your,)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>50</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>49 rows × 403 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6d60614b-abc4-4a45-8dfb-152970366de1')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-6d60614b-abc4-4a45-8dfb-152970366de1 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-6d60614b-abc4-4a45-8dfb-152970366de1');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+<span class="n">testing</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">listnum</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+  <span class="n">listnum</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">neigh</span> <span class="o">=</span> <span class="n">KNeighborsClassifier</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+  <span class="n">Y_pred</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> 
+  <span class="n">testing</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Y_pred</span><span class="p">)</span>
+<span class="n">testing</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[array([&#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;], dtype=object),
+ array([&#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;], dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;],
+       dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;,
+        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object),
+ array([&#39;kontra&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;kontra&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;kontra&#39;, &#39;kontra&#39;,
+        &#39;pro&#39;, &#39;kontra&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;], dtype=object)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26    kontra
+27       pro
+48    kontra
+22       pro
+30       pro
+51       pro
+7     kontra
+59    kontra
+34    kontra
+69       pro
+56       pro
+28       pro
+31       pro
+42    kontra
+33    kontra
+55       pro
+68       pro
+62       pro
+43       pro
+4        pro
+65       pro
+Name: label, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">make_scorer</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span><span class="n">precision_score</span>
+<span class="n">listtest</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">listacc</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">testing</span><span class="p">)):</span>
+  <span class="n">accuracy_neigh</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">testing</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">acc_neigh</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">neigh</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">listappend</span><span class="o">=</span><span class="n">listnum</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">appendlist</span><span class="o">=</span><span class="n">listappend</span><span class="p">,</span><span class="n">accuracy_neigh</span>
+  <span class="n">listtest</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">appendlist</span><span class="p">)</span>
+  <span class="n">listacc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accuracy_neigh</span><span class="p">)</span>
+<span class="n">listtest</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(2, 47.62),
+ (3, 57.14),
+ (4, 47.62),
+ (5, 57.14),
+ (6, 52.38),
+ (7, 57.14),
+ (8, 52.38),
+ (9, 57.14),
+ (10, 57.14),
+ (11, 57.14),
+ (12, 57.14),
+ (13, 61.9),
+ (14, 57.14),
+ (15, 57.14),
+ (16, 57.14),
+ (17, 80.95),
+ (18, 66.67),
+ (19, 90.48),
+ (20, 80.95)]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">listnum</span><span class="p">,</span> <span class="n">listacc</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">listnum</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Nilai Akurasi Berdasarkan Input&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Persentase Akurasi&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Persentase Akurasi&#39;)
+</pre></div>
+</div>
+<img alt="_images/seleksifitur_43_1.png" src="_images/seleksifitur_43_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">mutual_info_classif</span>
+<span class="c1"># determine the mutual information</span>
+<span class="n">mutual_info</span> <span class="o">=</span> <span class="n">mutual_info_classif</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">mutual_info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.        , 0.        , 0.0189089 , 0.00471683, 0.01740258,
+       0.13321008, 0.        , 0.12385537, 0.        , 0.09206958,
+       0.08517064, 0.04768256, 0.10706009, 0.        , 0.00071012,
+       0.        , 0.        , 0.        , 0.        , 0.        ,
+       0.09772379, 0.16986282, 0.        , 0.08929277, 0.        ,
+       0.        , 0.        , 0.        , 0.02601127, 0.0847141 ,
+       0.        , 0.        , 0.07446423, 0.04973907, 0.22245603,
+       0.08370335, 0.        , 0.        , 0.15608929, 0.        ,
+       0.        , 0.        , 0.        , 0.        , 0.05046867,
+       0.12117913, 0.        , 0.1623484 , 0.12407573, 0.01970991,
+       0.01058344, 0.        , 0.        , 0.        , 0.08512035,
+       0.        , 0.00250065, 0.        , 0.        , 0.        ,
+       0.06909517, 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.01497157, 0.        , 0.05160098, 0.        ,
+       0.03770598, 0.004914  , 0.08800437, 0.        , 0.02266659,
+       0.        , 0.        , 0.06510165, 0.03626247, 0.0328064 ,
+       0.        , 0.11234913, 0.        , 0.11217759, 0.        ,
+       0.03296712, 0.        , 0.00548264, 0.05675971, 0.03869348,
+       0.        , 0.00208836, 0.        , 0.0082837 , 0.        ,
+       0.        , 0.        , 0.        , 0.07928356, 0.04324483,
+       0.06697116, 0.01534557, 0.        , 0.        , 0.14828185,
+       0.        , 0.        , 0.        , 0.02156299, 0.03382482,
+       0.        , 0.02726358, 0.        , 0.        , 0.        ,
+       0.22270709, 0.        , 0.        , 0.        , 0.        ,
+       0.        , 0.        , 0.06704551, 0.0061295 , 0.02120003,
+       0.        , 0.03691034, 0.0105417 , 0.08315795, 0.        ,
+       0.07971771, 0.        , 0.        , 0.09270274, 0.        ,
+       0.        , 0.06181492, 0.        , 0.        , 0.01822053,
+       0.        , 0.0868146 , 0.        , 0.01208998, 0.05188443,
+       0.16001677, 0.00506866, 0.03030125, 0.02947741, 0.09747002,
+       0.0375758 , 0.04189215, 0.        , 0.04423137, 0.00263023,
+       0.08738815, 0.01177414, 0.03626247, 0.        , 0.        ,
+       0.        , 0.05739213, 0.12486938, 0.        , 0.        ,
+       0.        , 0.        , 0.0958518 , 0.        , 0.02390198,
+       0.05041962, 0.        , 0.12349315, 0.        , 0.06347409,
+       0.        , 0.        , 0.        , 0.        , 0.0506555 ,
+       0.05656784, 0.        , 0.19387651, 0.        , 0.        ,
+       0.0127179 , 0.04921929, 0.        , 0.03655548, 0.10189253,
+       0.        , 0.        , 0.        , 0.08223899, 0.05984653,
+       0.03758399, 0.02093278, 0.00800188, 0.        , 0.13102349,
+       0.        , 0.        , 0.03045733, 0.        , 0.15319836,
+       0.        , 0.01268044, 0.        , 0.        , 0.04094537,
+       0.00815412, 0.02798022, 0.        , 0.        , 0.05915737,
+       0.03449116, 0.15414589, 0.01725659, 0.01234766, 0.        ,
+       0.00368376, 0.        , 0.        , 0.        , 0.07297434,
+       0.02887003, 0.        , 0.        , 0.10838751, 0.00723877,
+       0.10395764, 0.0091333 , 0.06237343, 0.01318254, 0.00946608,
+       0.        , 0.12334738, 0.        , 0.        , 0.        ,
+       0.02287008, 0.        , 0.        , 0.0103547 , 0.10130944,
+       0.01817194, 0.11173416, 0.        , 0.        , 0.        ,
+       0.11707644, 0.01254106, 0.        , 0.        , 0.        ,
+       0.        , 0.16840583, 0.        , 0.04874296, 0.06621947,
+       0.07235936, 0.00674408, 0.14387651, 0.16013751, 0.        ,
+       0.11187132, 0.        , 0.0217419 , 0.11926376, 0.        ,
+       0.05400623, 0.06319166, 0.        , 0.        , 0.        ,
+       0.09941541, 0.03617265, 0.        , 0.01660893, 0.        ,
+       0.        , 0.        , 0.1306765 , 0.        , 0.10817842,
+       0.05497221, 0.        , 0.03885302, 0.        , 0.04075859,
+       0.05528653, 0.        , 0.09539902, 0.        , 0.07620489,
+       0.        , 0.00210513, 0.        , 0.177788  , 0.05318724,
+       0.        , 0.04685675, 0.        , 0.        , 0.192474  ,
+       0.00102746, 0.        , 0.02412483, 0.        , 0.0052048 ,
+       0.        , 0.01578708, 0.03510637, 0.17122433, 0.1327411 ,
+       0.0508088 , 0.        , 0.        , 0.04073356, 0.        ,
+       0.        , 0.0218538 , 0.20812629, 0.        , 0.        ,
+       0.1005872 , 0.        , 0.        , 0.        , 0.        ,
+       0.02881996, 0.        , 0.        , 0.        , 0.17751758,
+       0.        , 0.01142591, 0.        , 0.12865851, 0.05016534,
+       0.        , 0.        , 0.        , 0.        , 0.12214019,
+       0.08049782, 0.05058131, 0.        , 0.01512618, 0.08504107,
+       0.        , 0.00925529, 0.0579046 , 0.02937876, 0.        ,
+       0.00887341, 0.03596429, 0.        , 0.07101303, 0.        ,
+       0.        , 0.07078803, 0.        , 0.00576536, 0.06881098,
+       0.02073032, 0.08568747, 0.        , 0.11587248, 0.        ,
+       0.13070564, 0.08832022, 0.        , 0.01994933, 0.        ,
+       0.02484508, 0.        , 0.        , 0.        , 0.        ,
+       0.1073291 , 0.17590429, 0.05419323, 0.        , 0.06753267,
+       0.06466235, 0.        , 0.05330217, 0.        , 0.08071648,
+       0.        , 0.19986791, 0.01243012, 0.        , 0.04005306,
+       0.        , 0.        , 0.02757427, 0.        , 0.        ,
+       0.04701923, 0.055595  , 0.02397781])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mutual_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">mutual_info</span><span class="p">)</span>
+<span class="n">mutual_info</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">mutual_info</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(gera,)            0.222707
+(bakar,)           0.222456
+(sedia,)           0.208126
+(utara,)           0.199868
+(kompas,)          0.193877
+                     ...   
+(kerja,)           0.000000
+(kondusifitas,)    0.000000
+(konsumen,)        0.000000
+(ktober,)          0.000000
+(lewat,)           0.000000
+Length: 403, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#let&#39;s plot the ordered mutual_info values per feature</span>
+<span class="n">mutual_info</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f745faae690&gt;
+</pre></div>
+</div>
+<img alt="_images/seleksifitur_46_1.png" src="_images/seleksifitur_46_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">SelectKBest</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#No we Will select the  top 5 important features</span>
+<span class="n">sel_five_cols</span> <span class="o">=</span> <span class="n">SelectKBest</span><span class="p">(</span><span class="n">mutual_info_classif</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">sel_five_cols</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">X_train</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">sel_five_cols</span><span class="o">.</span><span class="n">get_support</span><span class="p">()]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([          (&#39;aceh&#39;,),           (&#39;agus&#39;,),           (&#39;aksi&#39;,),
+                  (&#39;aku&#39;,),           (&#39;amat&#39;,),           (&#39;anis&#39;,),
+               (&#39;ardana&#39;,),          (&#39;bakar&#39;,),         (&#39;bansos&#39;,),
+                (&#39;barat&#39;,),         (&#39;bareng&#39;,),           (&#39;bela&#39;,),
+                 (&#39;beri&#39;,),   (&#39;berkordinasi&#39;,),          (&#39;bijak&#39;,),
+                (&#39;bikin&#39;,),          (&#39;bulak&#39;,),         (&#39;dampak&#39;,),
+                 (&#39;dana&#39;,),          (&#39;dapat&#39;,),          (&#39;dasar&#39;,),
+                 (&#39;demo&#39;,),          (&#39;depan&#39;,),           (&#39;desa&#39;,),
+                (&#39;erick&#39;,),          (&#39;fokus&#39;,),          (&#39;gelar&#39;,),
+                 (&#39;gera&#39;,),            (&#39;gmn&#39;,),         (&#39;jelang&#39;,),
+                  (&#39;job&#39;,),           (&#39;juta&#39;,), (&#39;kagetanpadahal&#39;,),
+               (&#39;kantor&#39;,),         (&#39;kedung&#39;,),            (&#39;kel&#39;,),
+                 (&#39;kele&#39;,),         (&#39;kemudi&#39;,),         (&#39;kepala&#39;,),
+                (&#39;kerek&#39;,),          (&#39;kerja&#39;,),           (&#39;kota&#39;,),
+                 (&#39;kuda&#39;,),    (&#39;kwalitasnya&#39;,),       (&#39;langsung&#39;,),
+              (&#39;lengkap&#39;,),        (&#39;listrik&#39;,),         (&#39;lokasi&#39;,),
+                 (&#39;milu&#39;,),           (&#39;moda&#39;,),           (&#39;naik&#39;,),
+                  (&#39;nih&#39;,),            (&#39;nya&#39;,),           (&#39;ojol&#39;,),
+                (&#39;paket&#39;,),         (&#39;pantau&#39;,),          (&#39;pasar&#39;,),
+                (&#39;pasti&#39;,),         (&#39;patung&#39;,),         (&#39;pemkot&#39;,),
+               (&#39;pentol&#39;,),          (&#39;perak&#39;,),       (&#39;perintah&#39;,),
+               (&#39;persen&#39;,),      (&#39;pertalite&#39;,),        (&#39;pilpres&#39;,),
+                (&#39;polda&#39;,),       (&#39;polresta&#39;,),         (&#39;polsek&#39;,),
+             (&#39;properti&#39;,),     (&#39;properties&#39;,),         (&#39;rakyat&#39;,),
+                 (&#39;rana&#39;,),           (&#39;riau&#39;,),         (&#39;ringan&#39;,),
+                   (&#39;rp&#39;,),           (&#39;rugi&#39;,),          (&#39;salim&#39;,),
+                (&#39;sedia&#39;,),          (&#39;sedih&#39;,),        (&#39;sembako&#39;,),
+            (&#39;september&#39;,),           (&#39;seru&#39;,),         (&#39;sesuai&#39;,),
+                (&#39;simak&#39;,),          (&#39;solar&#39;,),        (&#39;subsidi&#39;,),
+                (&#39;tawar&#39;,),         (&#39;tengah&#39;,),         (&#39;thohir&#39;,),
+                (&#39;tolak&#39;,),   (&#39;transportasi&#39;,),        (&#39;triliun&#39;,),
+                (&#39;tugas&#39;,),         (&#39;tuntut&#39;,),           (&#39;udah&#39;,),
+                 (&#39;umat&#39;,),           (&#39;upah&#39;,),         (&#39;update&#39;,),
+               (&#39;voucer&#39;,)],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"9af4e8ffc0d14b8e8bfed1c15b321639": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "538c227e55ee422b9b3f40086bc5174c": {"model_name": "ProgressStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "61a022b34b7047b899477bb1072a2352": {"model_name": "FloatProgressModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_9af4e8ffc0d14b8e8bfed1c15b321639", "max": 70.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_538c227e55ee422b9b3f40086bc5174c", "value": 70.0}}, "8dfa3320818044b8ab41788d96476348": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "58eb45030d064b048b903db52408b939": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "1d86d892ee654784b64cac6b820d68e2": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_8dfa3320818044b8ab41788d96476348", "placeholder": "\u200b", "style": "IPY_MODEL_58eb45030d064b048b903db52408b939", "value": "Pandas Apply: 100%"}}, "7f63c846b9064df58ca46eadf23843ca": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6206bb0e2182498dbef0b9a7fd5d269e": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "78f3f4e3bc664e68bcded0acfd51f4d8": {"model_name": "HTMLModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HTMLView", "description": "", "description_tooltip": null, "layout": "IPY_MODEL_7f63c846b9064df58ca46eadf23843ca", "placeholder": "\u200b", "style": "IPY_MODEL_6206bb0e2182498dbef0b9a7fd5d269e", "value": " 70/70 [00:00&lt;00:00, 3445.18it/s]"}}, "8f51d7d1147b45edb9ee3874811459bb": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3ae1aa327d5e4a26b2b0e9ced89f0433": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_1d86d892ee654784b64cac6b820d68e2", "IPY_MODEL_61a022b34b7047b899477bb1072a2352", "IPY_MODEL_78f3f4e3bc664e68bcded0acfd51f4d8"], "layout": "IPY_MODEL_8f51d7d1147b45edb9ee3874811459bb"}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="crawling.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Crawling Data Twitter</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="markdown.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Markdown Files</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Crawling Data Twitter &#8212; My sample book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Seleksi Fitur" href="seleksifitur.html" />
+    <link rel="prev" title="Crawling Data Abstrak" href="abstrak.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Pendahuluan
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="abstrak.html">
+   Crawling Data Abstrak
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Crawling Data Twitter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="seleksifitur.html">
+   Seleksi Fitur
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/crawling.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcrawling.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/crawling.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Crawling Data Twitter</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-data-twitter">
+<h1>Crawling Data Twitter<a class="headerlink" href="#crawling-data-twitter" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/twintproject/twint.git
+<span class="o">%</span><span class="k">cd</span> twint
+<span class="o">!</span>pip3 install -r requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>fatal: destination path &#39;twint&#39; already exists and is not an empty directory.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/My Drive/tugaskuliah/webmining/twint
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: aiohttp in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 1)) (3.7.0)
+Requirement already satisfied: aiodns in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 2)) (3.0.0)
+Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 3)) (4.6.3)
+Requirement already satisfied: cchardet in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 4)) (2.1.7)
+Requirement already satisfied: dataclasses in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 5)) (0.6)
+Requirement already satisfied: elasticsearch in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 6)) (8.4.3)
+Requirement already satisfied: pysocks in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 7)) (1.7.1)
+Requirement already satisfied: pandas&gt;=0.23.0 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 8)) (1.3.5)
+Requirement already satisfied: aiohttp_socks&lt;=0.4.1 in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 9)) (0.4.1)
+Requirement already satisfied: schedule in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 10)) (1.1.0)
+Requirement already satisfied: geopy in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 11)) (1.17.0)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 12)) (0.1.11)
+Requirement already satisfied: googletransx in /usr/local/lib/python3.7/dist-packages (from -r requirements.txt (line 13)) (2.4.2)
+Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.21.6)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2022.4)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (2.8.2)
+Requirement already satisfied: attrs&gt;=19.2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp_socks&lt;=0.4.1-&gt;-r requirements.txt (line 9)) (21.4.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (6.0.2)
+Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.1)
+Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (3.0.4)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp-&gt;-r requirements.txt (line 1)) (1.8.1)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas&gt;=0.23.0-&gt;-r requirements.txt (line 8)) (1.15.0)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (2.10)
+Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp-&gt;-r requirements.txt (line 1)) (4.1.1)
+Requirement already satisfied: pycares&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from aiodns-&gt;-r requirements.txt (line 2)) (4.2.2)
+Requirement already satisfied: cffi&gt;=1.5.0 in /usr/local/lib/python3.7/dist-packages (from pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (1.15.1)
+Requirement already satisfied: pycparser in /usr/local/lib/python3.7/dist-packages (from cffi&gt;=1.5.0-&gt;pycares&gt;=4.0.0-&gt;aiodns-&gt;-r requirements.txt (line 2)) (2.21)
+Requirement already satisfied: elastic-transport&lt;9,&gt;=8 in /usr/local/lib/python3.7/dist-packages (from elasticsearch-&gt;-r requirements.txt (line 6)) (8.4.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (2022.9.24)
+Requirement already satisfied: urllib3&lt;2,&gt;=1.26.2 in /usr/local/lib/python3.7/dist-packages (from elastic-transport&lt;9,&gt;=8-&gt;elasticsearch-&gt;-r requirements.txt (line 6)) (1.26.12)
+Requirement already satisfied: geographiclib&lt;2,&gt;=1.49 in /usr/local/lib/python3.7/dist-packages (from geopy-&gt;-r requirements.txt (line 11)) (1.52)
+Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from googletransx-&gt;-r requirements.txt (line 13)) (2.28.1)
+Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;googletransx-&gt;-r requirements.txt (line 13)) (2.1.1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">nest</span><span class="o">-</span><span class="n">asyncio</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: nest-asyncio in /usr/local/lib/python3.7/dist-packages (1.5.6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install <span class="nv">aiohttp</span><span class="o">==</span><span class="m">3</span>.7.0
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: aiohttp==3.7.0 in /usr/local/lib/python3.7/dist-packages (3.7.0)
+Requirement already satisfied: async-timeout&lt;4.0,&gt;=3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (3.0.1)
+Requirement already satisfied: yarl&lt;2.0,&gt;=1.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (1.8.1)
+Requirement already satisfied: chardet&lt;4.0,&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (3.0.4)
+Requirement already satisfied: attrs&gt;=17.3.0 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (21.4.0)
+Requirement already satisfied: multidict&lt;7.0,&gt;=4.5 in /usr/local/lib/python3.7/dist-packages (from aiohttp==3.7.0) (6.0.2)
+Requirement already satisfied: typing-extensions&gt;=3.7.4 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (4.1.1)
+Requirement already satisfied: idna&gt;=2.0 in /usr/local/lib/python3.7/dist-packages (from yarl&lt;2.0,&gt;=1.0-&gt;aiohttp==3.7.0) (2.10)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span> <span class="c1">#digunakan sekali untuk mengaktifkan tindakan serentak dalam notebook jupyter.</span>
+<span class="kn">import</span> <span class="nn">twint</span> <span class="c1">#untuk import twint</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">Config</span><span class="p">()</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Search</span> <span class="o">=</span> <span class="s1">&#39;kenaikan bbm&#39;</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Pandas</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">c</span><span class="o">.</span><span class="n">Limit</span> <span class="o">=</span> <span class="mi">75</span>
+<span class="n">twint</span><span class="o">.</span><span class="n">run</span><span class="o">.</span><span class="n">Search</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579884441177948161 2022-10-11 17:19:38 +0000 &lt;annozaen&gt; @StefhanieQueen @Syarman59 @CCICPolri Faktanya yg demo Kenaikan BBM  tidak Lebih Banyak dari Yg antti Beli BBM trs yg di tolak apanya yg beli juga ngantri
+1579875847280132096 2022-10-11 16:45:29 +0000 &lt;mmki_real_&gt; BESOK Demo buruh yang digelar serentak di 34 provinsi itu membawa enam tuntutan. 1) Menolak kenaikan harga BBM 2) Menolak Pemutusan Hubungan Kerja (PHK) 3) Menolak Omnibus Law / UU cipta kerja 4) Menaikan upah buruh 13% 5) Mewujudkan Reforma Agraria sejati 6) Mengesahkan RUU PPRT  https://t.co/FiRG0wwDp4
+1579868183497871362 2022-10-11 16:15:02 +0000 &lt;WartaEkonomi&gt; Bantu Warga Terdampak Kenaikan BBM, Kota Depok Kembali Gulirkan Program D&#39;SabR  https://t.co/aSkFajG78r
+1579867956246646785 2022-10-11 16:14:07 +0000 &lt;tauberitamedia&gt; Pengamat otomotif Mukiat Sutikno bicara soal penggunaan BBM Pertalite yang dinilai lebih boros usai kenaikan harga.  https://t.co/L7MrE3PJcO
+1579865873870778370 2022-10-11 16:05:51 +0000 &lt;yjieongin&gt; @JONGHOCHOII ramean mah kisruh kayak lagi demo kenaikan bbm hyung, lu tau sendiri kan pas jaman kingdom entu 😭☝🏻
+1579862797197856768 2022-10-11 15:53:37 +0000 &lt;SINDOnews&gt; Tolak Kenaikan Harga BBM dan PHK Sepihak, Besok Buruh Kembali Demo   #Sindonews #BukanBeritaBiasa . https://t.co/Wu4gEztmub
+1579853610951020544 2022-10-11 15:17:07 +0000 &lt;emasyhudi&gt; Biangnya ya kenaikan bbm kemarin  . #inflasi #bbm #harganaik #mahal #infografis #infographic @ Jakarta  https://t.co/abyIqCXw8N
+1579851458077675520 2022-10-11 15:08:34 +0000 &lt;infonyaMKS&gt; Potret Dibalik Pam Unjuk Rasa Penolakan Kenaikan Harga BBM, Polisi Gelar Doa Bersama di DPRD Sulsel  https://t.co/cSckCzqbiO  https://t.co/u9zEC2lGoc
+1579849308278755330 2022-10-11 15:00:01 +0000 &lt;adianasrul&gt; @PANDHITADHYASA1 @03__nakula @VIPNetizen @faruq06254776 @DharulFit @ilhamjati4 @EdyKiantolol @kipasKertasTisu @Gilar1990 @mpok_GeeNon9 @Jayanegara_5555 @Kanjeng2022 @joulepakir @ex_AnakLolina @KepaArgawinata @Verraagustian_ @pn7l7h @Midjan_La_2 @pengarang_sajak @Mdy_Asmara1701 @aniesbaswedan @satriadjenar @SugiKawuloAlit @ekowboy2 @AndiSinulingga @YanHarahap @abu_waras @andripurnamajat @maspiyuaja @tatakujiyati @MCAOps @WZastra @alisyarief @suryapaloh51 @NasDem @DPR_RI Pencapaiannya luarrr biasa ya  Tepok tangan boleh lah ya Tapi pas diperhatikan itu berita tahun 2021 ya,kok ngga update ya beritanya? Kalo ekonomi 7 % harusnya keuangan APBNnya kuat dong? Kenapa rakyat terbeban dengan semua kenaikan BBM,gas,listrik,tol,PPN dll?
+1579820669831114753 2022-10-11 13:06:13 +0000 &lt;CalvinLEE709313&gt; @CNNIndonesia Hasil kenaikan BBM, makanya kantong para pejabatnya penuh
+1579816364231249920 2022-10-11 12:49:07 +0000 &lt;ngopibareng_id&gt; Pasca kenaikan harga bahan bakar minyak (BBM) bersubdidi, pengusaha di bidang transportasi mengeluhkan pembatasan pembelian BBM.  https://t.co/BzKOtZ48dD
+1579815750541672448 2022-10-11 12:46:41 +0000 &lt;calonMI&gt; Penurunan indeks keyakinan konsumen pada September membawa kekhawatiran. Pasalnya dampak kenaikan BBM langsung terasa pada seluruh kelompok pendapatan masyarakat  Kelompok masyarakat menengah menjadi yang paling  terdampak. Sulitnya mendapat bantuan membuat mereka,,,  https://t.co/LN3fkOmvyh
+1579810663802998784 2022-10-11 12:26:28 +0000 &lt;RRwt02&gt; @LSasahi @M45Broo_ hahahaha mas klo emang ijazah asli ga perlu pada ribut dilaporin ,tinggal hadapi klo emang bener juga nanti terbukti , trus apa urusannya Ama formula e ,jauhhhhhhh buanget klo pengalihan isue kenaikan BBM bisa jadi masss
+1579810438698921984 2022-10-11 12:25:34 +0000 &lt;beritajatimcom&gt; Tarif Angkutan Kapal Penumpang Naik, Dishub Sampang Tak Berkutik.  Sampang ( https://t.co/ksziGGp1k3) – Kenaikan harga Bahan Bakar Minyak (BBM), mulai berdampak nelayan dan kendaraan angkutan…  https://t.co/Q2ujoI8ySi #Peristiwa #BeritaSampang #dishubsampang via @beritajatimcom
+1579807381059346437 2022-10-11 12:13:25 +0000 &lt;Larre_alit&gt; @M4m4n_B43 Pedagang adalah jiwa jiwa petarung,pantang menyerah walau ada kenaikan BBM
+1579806774911467520 2022-10-11 12:11:01 +0000 &lt;Tifadil1&gt; @detikcom Cm di zaman SBY, negara bebas dari korupsi, tidak ada kenaikan BBM, tidak ada kenaikan tarif listrik, tidak ada oknum &#39;ulama&#39; yg di penjara.. Luar biasa SBY n  anaknya, NDOBOLNYA!!!!
+1579805152592416769 2022-10-11 12:04:34 +0000 &lt;jurnascom&gt; Anggaran Subsidi Hemat Hingga Rp33 23 T Dampak Kenaikan Harga BBM  https://t.co/pL1u4f0ZwP
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579802826628554754 2022-10-11 11:55:19 +0000 &lt;posmetromedan1&gt; Sat Narkoba Polresta Deliserdang Ikut Ringankan Beban Masyarakat Dampak Kenaikan BBM  https://t.co/lZJKFqcc8p
+1579802527918592000 2022-10-11 11:54:08 +0000 &lt;PKSJaksel&gt; PKS beralasan bahwa kondisi ekonomi saat ini tidak pantas menaikkan tarif tol karena Biaya Operasi Kendaraan (BOK) yang harus dikeluarkan oleh masyarakat melonjak. Apalagi ternyata ada kenaikan harga BBM dan berbagai komoditas lain. #TarifTolJanganMeroket
+1579801266909155328 2022-10-11 11:49:07 +0000 &lt;BungsuMama95&gt; Persis pak Jokowi yang keluar dari pintu belakang istana saat menghindari masa aksi penolakan kenaikan harga BBM kemarin.  Jinjingan yang mencontoh junjungan.😌
+1579800890596216837 2022-10-11 11:47:38 +0000 &lt;posmetromedan1&gt; Dampak Kenaikan Harga BBM, Sat Reskrim Polresta Deliserdang Bagikan Bansos  https://t.co/LPQBx8ls9A
+1579799797715808257 2022-10-11 11:43:17 +0000 &lt;bangkujai&gt; @GunRomli Pengalihan isu kenaikan BBM... Oleh sumsum pretttttttttt  https://t.co/SpfmubZY28
+1579796462090665984 2022-10-11 11:30:02 +0000 &lt;RandueUwit&gt; Demo Tolak Kenaikan Harga BBM Bersubsidi  https://t.co/9XRyIuPoWv
+1579794769298960384 2022-10-11 11:23:18 +0000 &lt;YuliHan13872756&gt; @SINDOnews Sudahlah rakyat diperas dg kenaikan harga bbm, ditipu pula. Laknat benar kalian😡😡 Bagaimana @pertamina ?? Dan @BPKN_RI ??
+1579794088647614465 2022-10-11 11:20:36 +0000 &lt;KATADATAcoid&gt; Kebijakan kenaikan harga BBM dianggap tepat karena anggaran negara yang terbatas perlu dialokasikan kepada belanja prioritas dan berkualitas.  https://t.co/GeI2HlmvKc
+1579789202530897920 2022-10-11 11:01:11 +0000 &lt;adit_ft&gt; KENAIKAN BBM KEMARIN ADALAH BUAH HASIL DARI PEMERINTAHAN YG KALIAN PILIH WAKTU PILPRES.LUCU BGT NGELIAT LU NOLAK INI KAWAN .
+1579787977903190016 2022-10-11 10:56:19 +0000 &lt;KadalRujak&gt; Demo Tolak Kenaikan Harga BBM Bersubsidi  https://t.co/gQnmUoG1Zi
+1579787394756509698 2022-10-11 10:54:00 +0000 &lt;COREIndonesia&gt; [CORE INSIGHT] Salah satu kekhawatiran yang sering disuarakan berbagai pihak akan kenaikan harga BBM adalah menurunnya daya beli masyarakat yang diikuti oleh peningkatan kemiskinan.
+1579781459766042624 2022-10-11 10:30:25 +0000 &lt;Iroha32490373&gt; @CNNIndonesia Tapi nyusahin rakyat dgn kenaikan BBM jalan terus.,. Aneh , besok bilang lagi ini eh lusa lain lagi  https://t.co/ROAj1NfItv
+1579778546503159811 2022-10-11 10:18:51 +0000 &lt;whiz_idn&gt; Di tahun 2013, inflasi adalah sebesar 8,38%, jauh di atas target pemerintah. Inflasi ini disebabkan oleh kenaikan harga BBM, yang kemudian berdampak pula pada harga beberapa komoditas yang ikut meningkat.
+1579776459576840192 2022-10-11 10:10:33 +0000 &lt;Liukiuaquose44&gt; BLT BBM sebagai upaya membantu warga yang terkena dampak kenaikan BBM #BantuanSosial #BLTBBM #BLTBBMBantuMasyarakat #BansosBBMRingankanRakyat #KPMPenyaluranBLTTepatSasaran #SukseskanKebijakanPemerintah #SubsidiBerkeadilanUntukMasaDepan Aceh Info  https://t.co/ie3qrXWU4L
+1579775931719176192 2022-10-11 10:08:27 +0000 &lt;HumasPolPinggir&gt; Kapolres Bengkalis beri bantuan sembako kepada supir becak dan gerobak, yang terdampak kenaikan harga BBM @ Pinggir, Riau, Indonesia  https://t.co/QJ5LA7YfQE
+1579775768556867584 2022-10-11 10:07:48 +0000 &lt;razkuning&gt; Demo Tolak Kenaikan Harga BBM Bersubsidi  https://t.co/zUtiKTtLm7
+1579769671414599681 2022-10-11 09:43:35 +0000 &lt;sariagri_id&gt; Dampak Kenaikan BBM Pemerintah Mampu Menghemat Rp3323 Triliun  https://t.co/9ZOpAntb8v #sariagri #pertanian
+1579768832289574913 2022-10-11 09:40:14 +0000 &lt;redaksidetail&gt; Dewan DPRD Tanjungjabung Timur Mengapresiasi Aksi Unjuk Rasa HMI Tanjungjabung Timur Protes Kenaikan Harga BBM  https://t.co/rngETguWww
+1579768705940353025 2022-10-11 09:39:44 +0000 &lt;HumasPolPinggir&gt; Kapolres Bengkalis berbagi Sembako kepada Nelayan yang terdampak kenaikan harga BBM @ Pinggir, Riau, Indonesia  https://t.co/ec6tpJ9NYf
+1579765382973620228 2022-10-11 09:26:32 +0000 &lt;Washilah_uinam&gt; Kritik Kenaikan Harga BBM, Mapalasta UIN Alauddin Bakal Gelar Nobar Film Dokumenter Angin Timur    https://t.co/IFkpnKizRX
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579764416341770240 2022-10-11 09:22:42 +0000 &lt;Poldakaltim&gt; Peduli dampak kenaikan BBM, Wakapolda Kaltim Brigjen Pol. Drs. Mujiyono, S.H, M. Hum bersama dengan Wadankor Brimob Irjen Pol. Drs. Setyobudi Moempoeni Harso, SH., M.Hum. dan Dansat Brimob kaltim membagikan 1500 paket sembako kepada perwakilan komunitas.  https://t.co/8GI0I8CoA1
+1579763710767534081 2022-10-11 09:19:53 +0000 &lt;Angrysponge56&gt; Warga Kalimantan Selatan harus tau penyesuaian harga BBM ini untuk kebaikan masyarakat #BBMSubsidi #BBMBersubsidi #BantuanBBMUntukRakyat #BLTBBMTepatSasaran #SubsidiTepatSasaran #SemuaDemiKesejahteraan #CerdasPakaiBBM #BijakPakaiBBM
+1579762903502454791 2022-10-11 09:16:41 +0000 &lt;dadiriadi1&gt; @pupr_bpjt /Sebanyak berapa M pun dana perbaikan Tol Japek, kualitas selalu bergelombang dan malah menyebabkan kemacetan saat BBM menjadi mahal, tunda kenaikan tarif tol
+1579762695850852353 2022-10-11 09:15:51 +0000 &lt;sabhararespsp&gt; Personil Sat Samapta Polres Padangsidimpuan tingkatkan kegiatan patroli ke SPBU 14.227.317 PT. Aminah Putro Deras  https://t.co/9Tl3mSQlvf.Raja Kota Padangsidimpuan dalam rangka antisipasi terjadinya Gangguan Kamtibmas terkait adanya kenaikan harga BBM.  https://t.co/vV7ecXRp5c
+1579762325162459137 2022-10-11 09:14:23 +0000 &lt;TuamaMinahasa20&gt; Pemerintah menyelamatkan masyarakat yang terdampak kenaikan harga BBM #BantuanSosial #BLTBBM #BLTBBMBantuMasyarakat #BansosBBMRingankanRakyat #KPMPenyaluranBLTTepatSasaran #SukseskanKebijakanPemerintah #SubsidiBerkeadilanUntukMasaDepan Sulawesi Utara  https://t.co/ep8FhNTkGX
+1579760992728551424 2022-10-11 09:09:05 +0000 &lt;kumparan&gt; Platform transportasi online, inDrive menyatakan, sistem negosiasi tarif antara pengemudi dan penumpang menjadi strategi untuk menghadapi kenaikan harga BBM.  https://t.co/HlJLULqj0c
+1579758950723256320 2022-10-11 09:00:59 +0000 &lt;SafitriFit8&gt; Aksi Demo Tolak Kenaikan Harga BBM Masih Terjadi  https://t.co/DuDUnLqvc3
+1579753040462368770 2022-10-11 08:37:29 +0000 &lt;Alyse91660860&gt; BLT BBM solusi untuk masyarakat ditengah kenaikan harga BBM. Masyarakat Nusa Tenggara Barat Berterima kasih.  #BLTBBMBantuMasyarakat #BansosBBMRingankanRakyat #KPMPenyaluranBLTTepatSasaran #SukseskanKebijakanPemerintah #SubsidiBerkeadilanUntukMasaDepan  https://t.co/bRpypUcS9b
+1579751414867562496 2022-10-11 08:31:02 +0000 &lt;NanangSuhen32&gt; Pemerintah Memberikan BLT Bagi Warga yang Terdampak kenaikan Harga BBM. Lampung Dukung Kebijakan Pemerintah  #BantuanSosial #BLTBBM #BLTBBMBantuMasyarakat #BansosBBMRingankanRakyat #KPMPenyaluranBLTTepatSasaran #SukseskanKebijakanPemerintah #SubsidiBerkeadilanUntukMasaDepan  https://t.co/1X0Stbtc3a
+1579751358278029314 2022-10-11 08:30:48 +0000 &lt;Kominfo_Barsel&gt; Harga Pangan di Barsel Belum Terpengaruh Kenaikan BBM   https://t.co/4cWhNrudLq
+1579748131658694656 2022-10-11 08:17:59 +0000 &lt;StefhanieQueen&gt; @annozaen @Syarman59 @CCICPolri Gw lbh milih demo kenaikan hrga BBM dr pd demo belain dia wkwkwk  Klo demo BBM jls membela rakyat tp klo demo belain dia ngapain blm tntu dia belain rakyat 🤣
+1579747889990889472 2022-10-11 08:17:01 +0000 &lt;americanocoff3&gt; Aksi Demo Tolak Kenaikan Harga BBM Masih Terjadi  https://t.co/H6OM4TAq3L
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579746785085751296 2022-10-11 08:12:38 +0000 &lt;moudymoe&gt; Serem bgt deh dengan kenaikan bbm ini, keknya ekonomi jg pada sulit, gapernah2 ya w nyetir di jakarta raya ini denger orang2 maki2 w, nah ini udah seminggu ini udah 2x orang maki2 pas w lgi mau nyetir😫😫😫
+1579746642248732675 2022-10-11 08:12:04 +0000 &lt;KATADATAcoid&gt; Meski harga minyak mentah mengalami kenaikan, sejumah penyedia BBM di dalam negeri seperti Pertamina, Shell, dan BP belum memutuskan untuk menaikan harga BBM.  https://t.co/gExsFX65lO
+1579742226187362307 2022-10-11 07:54:31 +0000 &lt;mediaindonesia&gt; Penghematan karena Kenaikan Harga BBM Subsidi capai Rp33,23 Triliun. Dia membeberkan rincian penghematan dari penyesuaian harga pertalite hingga akhir 2022 sebesar Rp23,43 triliun. Sementara itu, penghematan dari solar mencapai Rp9,8 triliun.   https://t.co/xTMfWzByFp
+1579741792316313600 2022-10-11 07:52:48 +0000 &lt;SKakilima&gt; Kenapa cuma Ormas Islam saja yg berdemo menolak kenaikan BBM,apakah umat atau ormas² agama lain tidak terdampak dgn kondisi ini ???.  https://t.co/Dp0qaKI2U1
+1579741079028797441 2022-10-11 07:49:58 +0000 &lt;SandiSaya3&gt; Mahasiswa Demo Salah Sasaran!!! Dukung BBM Bersubsidi Untuk Rakyat Menolak Kenaikan Harga BBM!!! #BBMSubsidi #BBMBersubsidi #BantuanBBMUntukRakyat #BLTBBMTepatSasaran #SubsidiTepatSasaran #SemuaDemiKesejahteraan #CerdasPakaiBBM #BijakPakaiBBM Aceh  https://t.co/eMcaUHC1iz
+1579740040925958144 2022-10-11 07:45:50 +0000 &lt;lampungpost_&gt; Menteri Koordinator Bidang Perekonomian Airlangga Hartarto mengatakan bahwa efek dari kenaikan harga BBM subsidi akan berpengaruh terhadap inflasi setidaknya dalam kurun waktu empat bulan.   #BBM #Inflasi #Lampungpost  https://t.co/5hDjZ4xBxn
+1579739017083760640 2022-10-11 07:41:46 +0000 &lt;pajaksijunjung&gt; Kinerja #APBNKita salah satunya berfokus untuk mengurangi dampak kenaikan BBM melalui penyaluran BLT.  Bantuan kepada masyarakat ini tentu tak lepas dari kontribusi #KawanPajak melalui pembayaran pajak secara rutin.  Terima kasih atas kontribusinya, #KawanPajak.  https://t.co/7Z6WoZGqlp
+1579738880789860353 2022-10-11 07:41:13 +0000 &lt;jjoewanto&gt; @SBYudhoyono Mmg ada indikasi ke arah resesi ekonomi, inflasi sampai bulan September cukup tinggi, apalagi pasar di Indonesia sangat sensitif dengan kenaikan harga BBM
+1579737922135150592 2022-10-11 07:37:25 +0000 &lt;melisawinawan&gt; BLT itu solusi di tengah kenaikan harga BBM, kudu didukung penuh nih program BLT BBM ini #BLTBBMBantuMasyarakat #BansosBBMRingankanRakyat #KPMPenyaluranBLTTepatSasaran #SukseskanKebijakanPemerintah #SubsidiBerkeadilanUntukMasaDepan Banten  https://t.co/rO6uPUtFQa
+1579737808344059905 2022-10-11 07:36:58 +0000 &lt;Satuaja50842374&gt; Kenaikan harga BBM bisa banget di cover gara gara beli Oli di Planet Ban soalnya kan lebih jarang buat service jadinya Bisa Untung ratusan ribu dan Bantu berhemat 50%
+1579737721664606209 2022-10-11 07:36:37 +0000 &lt;sianipar1998&gt; Pemerintah pastikan ketersediaan bahan pokok ditengah kenaikan harga BBM #BBMSubsidi #BBMBersubsidi #BantuanBBMUntukRakyat #BLTBBMTepatSasaran #SubsidiTepatSasaran #SemuaDemiKesejahteraan Banten  https://t.co/QAGdzfBJkb
+1579737330348621824 2022-10-11 07:35:04 +0000 &lt;sariagri_id&gt; Hasil Survei Kenaikan Harga BBM Bikin Orderan Ojol Turun  https://t.co/J3Fa1nOx0Y #sariagri #pertanian
+1579737292327223296 2022-10-11 07:34:55 +0000 &lt;HumasMetroBks&gt; Polri Peduli Dampak Kenaikan BBM  Personel Polsek Cibarusah Membagikan Bantuan berupa Paket Beras Kepada Masyarakat yang Terdampak Kenaikan BBM (Bahan Bakar Minyak) di Kp. Limo Desa Cibarusah Jaya, Kabupaten Bekasi Selasa (11/10/2022)  https://t.co/QwLAleLv9u
+1579736495556296704 2022-10-11 07:31:45 +0000 &lt;pajaksijunjung&gt; Uang Pajak untuk Masyarakat  Penyaluran Bantuan Langsung Tunai kepada masyarakat merupakan wujud kontribusi #KawanPajak dalam menyokong masyraakat yang terdampak kenaikan harga BBM.  Terima kasih #KawanPajak, kontribusi #KawanPajak melalui pajak telah turut membantu masyarakat.  https://t.co/HNmxYJAIt4
+1579732877352538113 2022-10-11 07:17:22 +0000 &lt;gertakgertuk&gt; pemerintah pastikan ketersediaan pangan pokok pada kenaikan BBM. aceh. #BBMSubsidi #BBMBersubsidi #BantuanBBMUntukRakyat #BLTBBMTepatSasaran #SubsidiTepatSasaran #SemuaDemiKesejahteraan #CerdasPakaiBBM #BijakPakaiBBM  https://t.co/txR03WkFPt
+1579731121050333187 2022-10-11 07:10:23 +0000 &lt;raffapediaBM&gt; BLT adalah solusi saat ini di Indonesia di tengah kenaikan Harga BBM !  #BLTBBMBantuMasyarakat #BansosBBMRingankanRakyat #KPMPenyaluranBLTTepatSasaran #SukseskanKebijakanPemerintah #SubsidiBerkeadilanUntukMasaDepan Banten  https://t.co/Abej2M8lir
+1579730086802046977 2022-10-11 07:06:17 +0000 &lt;yunisaras15&gt; Pucing mikirin kenaikan bbm eh lumayan juga ganti oli di planet ban Untung ratusan ribu Bantu berhemat 50%
+1579729605199482880 2022-10-11 07:04:22 +0000 &lt;AhmadSy38761427&gt; solusi perawatan motor di tengah kondisi semuanya serba naik,karena imbas kenaikan BBM servis bisa hemat ratusan ribu di Plane Ban serta olinya juga mempunyai ketahanan 5000km
+1579729275900792832 2022-10-11 07:03:03 +0000 &lt;Sugirama&gt; Ada Kenaikan Harga BBM, Jokowi Sebut Laju Inflasi Masih Terkendali  https://t.co/NBCbydBSGT
+1579729262911053825 2022-10-11 07:03:00 +0000 &lt;ilhamwhyd5&gt; sedih gue ngedenger berita kenaikan BBM, duuhh...makin nguras kantong nih motor. kyknya hrs pindah bengkel ni biar bisa untung ratusan ribu dan seenggaknya bisa berhemat 50%, ke planet ban aja deh klo gitu
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1579729088498962433 2022-10-11 07:02:19 +0000 &lt;Iwans08392994&gt; @BKNgoid kami mau tanya kapan tanggal kepastian bagi kami yang sudah lulus Passing grade 2021 kok di undur- undur terus, kami nunggu sudah hampir setahun kok belum juga ada kepastiannya... Sementara untuk kenaikan BBM bisa ketuk palu  sejam berikut bisa naik harga
+1579728925072453632 2022-10-11 07:01:40 +0000 &lt;queenmoodx&gt; Di saat imbas kenaikan BBM saat ini pusing pengeluaran juga banyak.. untung aku selalu service dan ganti oli di Planet Ban ketahanan bisa sampe 5000km, solusi perawatan kendaraan Bantu berhemat 50% makin Untung ratusan ribu deh
+1579728659426185217 2022-10-11 07:00:37 +0000 &lt;heyoogurlz&gt; mantull bgt dah planet ban, solutif bgt buat sekarang yang lg kenaikan bbm. bs bantu berhemat 50% dan jd untung ratusan ribu
+1579728627201376256 2022-10-11 07:00:29 +0000 &lt;dumdumzt&gt; lopp bgt buat planet ban ngebantu bgt disaat krisis gini karna adanya kenaikan bbm, planet bs ngebantu akuu buat berhemat 50% dan untung ratusan ribu
+1579728580497797121 2022-10-11 07:00:18 +0000 &lt;dyaahsgrt1&gt; bisaaa bangett nih planet ban disaat krisis gini karna kenaikan bbm bs ngebantu bgtt buat bantu berhemat 50% alhasil bs untung ratusan ribu dehh
+1579728528576491520 2022-10-11 07:00:05 +0000 &lt;taejungkok&gt; yok Bantu berhemat 50%  apalagi harga naikk nik imbas kenaikan harga BBM , ya masalah servis dan ganti oli ke Planet Ban aja lah Untung ratusan ribu
+1579728517637746689 2022-10-11 07:00:03 +0000 &lt;saejabin&gt; ditengah tengah kenaikan harga bbm ini jangan bimbang buat ngerawat kendaraan karena ada Planet Ban yang bakal Bantu berhemat 50%, bukannya buntung malah Untung ratusan ribu kan 😆
+1579728517088088069 2022-10-11 07:00:03 +0000 &lt;PengenBIGWIN&gt; Planet Ban ini mejadi kombinasi solusi perawatan motor di tengah kondisi semua harga yang serba naik, karena imbas kenaikan harga BBM. Bisa Untung ratusan ribu dan bisa Bantu berhemat 50%. Keren abis kan sob..!!
+1579728516849012737 2022-10-11 07:00:03 +0000 &lt;Pusingkepalaa1&gt; asik deh meskipun apa-apa serba naik karena kenaikan bbm tapi kalo ganti olinya di Planet Ban kita malahan bisa Untung ratusan ribu dan Bantu berhemat 50%
+1579728510838575106 2022-10-11 07:00:01 +0000 &lt;harumi_nabila&gt; Planet Ban bantu aku lebih hemat buat servis oli ratusan ribu loh ditengah kenaikan harga BBM
+1579728509286727682 2022-10-11 07:00:01 +0000 &lt;Tuyul__Gondrong&gt; Planet Ban ini mejadi kombinasi solusi perawatan motor di tengah kondisi semua harga yang serba naik, karena imbas kenaikan harga BBM. Bisa Untung ratusan ribu dan bisa Bantu berhemat 50%
+1579728507944505345 2022-10-11 07:00:00 +0000 &lt;Adliani20&gt; Ngerasa bgt efek kenaikan BBM ,yg lain jd pd ikutan naik,apa kabar nih gaji,naik jg kah? Harus bs pinter nih atur keuangan,untung kemarin aku ganti Oli di Planet Ban ,bisa Bantu berhemat 50% jadinya kan,secara lebih awet ,kita jadi Untung ratusan ribu juga nih.
+1579728506627448834 2022-10-11 07:00:00 +0000 &lt;saturnusch&gt; Lagi ada kenaikan BBM gini, untung ada Planet Ban mana udah untung ratusan ribu, bisa bantu berhemat 50% juga. Keren banget, mana service juga ga kalah keren..
+1579728506115608576 2022-10-11 07:00:00 +0000 &lt;JamilShaquina2&gt; Mau untung ratusan ribu ditengah kenaikan harga BBM?makanya ganti oli di Planet Ban aja bisa hemat ratusan ribu loh..
+1579728506069520384 2022-10-11 07:00:00 +0000 &lt;Kulsum23258195&gt; Ditengah kenaikan harga bbm ini, coba kita lihat, Planet Ban memberikan angin segar buat kita semua.. Bisa bantu berhemat 50% dan dapat uang ratusan ribu rupiah
+1579728505935478784 2022-10-11 07:00:00 +0000 &lt;aisyahwakhhh&gt; Planet ban sangat membantu di tengah kenaikan bbm, jadi hemat 50% deh oli juga awet
+1579728331716853762 2022-10-11 06:59:18 +0000 &lt;_rakyatmerdeka&gt; Anggaran Subsidi Hemat Hingga Rp 33,23 T Dampak Kenaikan Harga BBM  https://t.co/DZhZxRPAYH
+1579728324599123968 2022-10-11 06:59:17 +0000 &lt;rifqantv&gt; #81 Teruntuk yang Terdampak Kenaikan BBM - Ustaz Khairullah Anwar Luthfi  https://t.co/7DlDcvDczS
+1579726249186164736 2022-10-11 06:51:02 +0000 &lt;HumasLumbis&gt; Personel Polsek Lumbis melaksanakan himbauan kepada warga masyarakat di wilayah Kecamatan Lumbis yang melaksanakan aktivitas agar selalu berhati-hati dan tetap menjaga kondusifitas wilayah agar tetap aman baik melewati perubahan situasi pasca kenaikan BBM maupun jelang pemilu  https://t.co/JdKOtKLCB6
+1579723926024097793 2022-10-11 06:41:48 +0000 &lt;raffapediaBM&gt; Penyesuaian harga BBM tk memenuhi prinsip keadilan bagis masyarakat kurang mampu dan menjamin kenaikan ekonomi menanjak. Jadi bagus kebijakan ini diterapkan #BBMSubsidi #BBMBersubsidi #BantuanBBMUntukRakyat #BLTBBMTepatSasaran #SubsidiTepatSasaran #SemuaDemiKesejahteraan Banten  https://t.co/PeaDz1wKhE
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span> <span class="o">=</span> <span class="n">twint</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">panda</span><span class="o">.</span><span class="n">Tweets_df</span>
+<span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     @StefhanieQueen @Syarman59 @CCICPolri Faktanya...
+1     BESOK Demo buruh yang digelar serentak di 34 p...
+2     Bantu Warga Terdampak Kenaikan BBM, Kota Depok...
+3     Pengamat otomotif Mukiat Sutikno bicara soal p...
+4     @JONGHOCHOII ramean mah kisruh kayak lagi demo...
+                            ...                        
+84    Planet ban sangat membantu di tengah kenaikan ...
+85    Anggaran Subsidi Hemat Hingga Rp 33,23 T Dampa...
+86    #81 Teruntuk yang Terdampak Kenaikan BBM - Ust...
+87    Personel Polsek Lumbis melaksanakan himbauan k...
+88    Penyesuaian harga BBM tk memenuhi prinsip kead...
+Name: tweet, Length: 89, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tweets_dfs</span><span class="p">[</span><span class="s2">&quot;tweet&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;datatwint.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="abstrak.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Crawling Data Abstrak</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="seleksifitur.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Seleksi Fitur</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By The Jupyter Book Community<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -50,9 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Crawling Data Twitter" href="crawling.html" />
     <link rel="prev" title="Pendahuluan" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -117,6 +119,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Crawling Data Abstrak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="crawling.html">
+   Crawling Data Twitter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="seleksifitur.html">
+   Seleksi Fitur
   </a>
  </li>
  <li class="toctree-l1">
@@ -358,129 +370,28 @@ Program Studi Teknik Informatika Fakultas Teknik Universitas Trunojoyo Madura</s
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting requests_html
-  Downloading requests_html-0.10.0-py3-none-any.whl (13 kB)
-Collecting pyppeteer&gt;=0.0.14
-  Downloading pyppeteer-1.0.2-py3-none-any.whl (83 kB)
-?25l
-     |████                            | 10 kB 43.3 MB/s eta 0:00:01
-     |███████▉                        | 20 kB 35.1 MB/s eta 0:00:01
-     |███████████▉                    | 30 kB 44.6 MB/s eta 0:00:01
-     |███████████████▊                | 40 kB 20.7 MB/s eta 0:00:01
-     |███████████████████▋            | 51 kB 24.5 MB/s eta 0:00:01
-     |███████████████████████▋        | 61 kB 28.3 MB/s eta 0:00:01
-     |███████████████████████████▌    | 71 kB 26.1 MB/s eta 0:00:01
-     |███████████████████████████████▍| 81 kB 28.4 MB/s eta 0:00:01
-     |████████████████████████████████| 83 kB 2.4 MB/s 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hCollecting w3lib
-  Downloading w3lib-2.0.1-py3-none-any.whl (20 kB)
-Collecting pyquery
-  Downloading pyquery-1.4.3-py3-none-any.whl (22 kB)
-Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from requests_html) (2.23.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fake-useragent
-  Downloading fake-useragent-0.1.11.tar.gz (13 kB)
-Collecting parse
-  Downloading parse-1.19.0.tar.gz (30 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: bs4 in /usr/local/lib/python3.7/dist-packages (from requests_html) (0.0.1)
-Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.42.1 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (4.64.1)
+Requirement already satisfied: requests_html in /usr/local/lib/python3.7/dist-packages (0.10.0)
+Requirement already satisfied: bs4 in /usr/local/lib/python3.7/dist-packages (from requests_html) (0.0.1)
+Requirement already satisfied: w3lib in /usr/local/lib/python3.7/dist-packages (from requests_html) (2.0.1)
+Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from requests_html) (2.28.1)
+Requirement already satisfied: pyquery in /usr/local/lib/python3.7/dist-packages (from requests_html) (1.4.3)
+Requirement already satisfied: pyppeteer&gt;=0.0.14 in /usr/local/lib/python3.7/dist-packages (from requests_html) (1.0.2)
+Requirement already satisfied: fake-useragent in /usr/local/lib/python3.7/dist-packages (from requests_html) (0.1.11)
+Requirement already satisfied: parse in /usr/local/lib/python3.7/dist-packages (from requests_html) (1.19.0)
+Requirement already satisfied: pyee&lt;9.0.0,&gt;=8.1.0 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (8.2.2)
 Requirement already satisfied: appdirs&lt;2.0.0,&gt;=1.4.3 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (1.4.4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting websockets&lt;11.0,&gt;=10.0
-  Downloading websockets-10.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (112 kB)
-?25l
-     |███                             | 10 kB 32.3 MB/s eta 0:00:01
-     |█████▉                          | 20 kB 43.3 MB/s eta 0:00:01
-     |████████▊                       | 30 kB 41.0 MB/s eta 0:00:01
-     |███████████▊                    | 40 kB 39.0 MB/s eta 0:00:01
-     |██████████████▋                 | 51 kB 41.9 MB/s eta 0:00:01
-     |█████████████████▌              | 61 kB 46.6 MB/s eta 0:00:01
-     |████████████████████▌           | 71 kB 50.9 MB/s eta 0:00:01
-     |███████████████████████▍        | 81 kB 54.3 MB/s eta 0:00:01
-     |██████████████████████████▎     | 92 kB 56.5 MB/s eta 0:00:01
-     |█████████████████████████████▎  | 102 kB 59.0 MB/s eta 0:00:01
-     |████████████████████████████████| 112 kB 59.0 MB/s 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>?25hCollecting urllib3&lt;2.0.0,&gt;=1.25.8
-  Downloading urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
-?25l
-     |██▍                             | 10 kB 34.7 MB/s eta 0:00:01
-     |████▊                           | 20 kB 46.6 MB/s eta 0:00:01
-     |███████                         | 30 kB 55.9 MB/s eta 0:00:01
-     |█████████▍                      | 40 kB 62.3 MB/s eta 0:00:01
-     |███████████▊                    | 51 kB 68.3 MB/s eta 0:00:01
-     |██████████████                  | 61 kB 74.7 MB/s eta 0:00:01
-     |████████████████▍               | 71 kB 78.1 MB/s eta 0:00:01
-     |██████████████████▊             | 81 kB 82.5 MB/s eta 0:00:01
-     |█████████████████████           | 92 kB 85.9 MB/s eta 0:00:01
-     |███████████████████████▍        | 102 kB 89.1 MB/s eta 0:00:01
-     |█████████████████████████▊      | 112 kB 89.1 MB/s eta 0:00:01
-     |████████████████████████████    | 122 kB 89.1 MB/s eta 0:00:01
-     |██████████████████████████████▍ | 133 kB 89.1 MB/s eta 0:00:01
-     |████████████████████████████████| 140 kB 89.1 MB/s 
-?25hRequirement already satisfied: importlib-metadata&gt;=1.4 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (5.0.0)
+Requirement already satisfied: urllib3&lt;2.0.0,&gt;=1.25.8 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (1.26.12)
+Requirement already satisfied: importlib-metadata&gt;=1.4 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (5.0.0)
+Requirement already satisfied: websockets&lt;11.0,&gt;=10.0 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (10.3)
 Requirement already satisfied: certifi&gt;=2021 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (2022.9.24)
-Collecting pyee&lt;9.0.0,&gt;=8.1.0
-  Downloading pyee-8.2.2-py2.py3-none-any.whl (12 kB)
+Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.42.1 in /usr/local/lib/python3.7/dist-packages (from pyppeteer&gt;=0.0.14-&gt;requests_html) (4.64.1)
 Requirement already satisfied: typing-extensions&gt;=3.6.4 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=1.4-&gt;pyppeteer&gt;=0.0.14-&gt;requests_html) (4.1.1)
 Requirement already satisfied: zipp&gt;=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata&gt;=1.4-&gt;pyppeteer&gt;=0.0.14-&gt;requests_html) (3.8.1)
 Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-packages (from bs4-&gt;requests_html) (4.6.3)
+Requirement already satisfied: cssselect&gt;0.7.9 in /usr/local/lib/python3.7/dist-packages (from pyquery-&gt;requests_html) (1.1.0)
 Requirement already satisfied: lxml&gt;=2.1 in /usr/local/lib/python3.7/dist-packages (from pyquery-&gt;requests_html) (4.9.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting cssselect&gt;0.7.9
-  Downloading cssselect-1.1.0-py2.py3-none-any.whl (16 kB)
-Requirement already satisfied: chardet&lt;4,&gt;=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;requests_html) (3.0.4)
-Collecting urllib3&lt;2.0.0,&gt;=1.25.8
-  Downloading urllib3-1.25.11-py2.py3-none-any.whl (127 kB)
-?25l
-     |██▋                             | 10 kB 44.9 MB/s eta 0:00:01
-     |█████▏                          | 20 kB 56.7 MB/s eta 0:00:01
-     |███████▊                        | 30 kB 70.3 MB/s eta 0:00:01
-     |██████████▎                     | 40 kB 79.5 MB/s eta 0:00:01
-     |████████████▉                   | 51 kB 85.6 MB/s eta 0:00:01
-     |███████████████▍                | 61 kB 88.8 MB/s eta 0:00:01
-     |██████████████████              | 71 kB 92.6 MB/s eta 0:00:01
-     |████████████████████▌           | 81 kB 93.6 MB/s eta 0:00:01
-     |███████████████████████         | 92 kB 97.6 MB/s eta 0:00:01
-     |█████████████████████████▋      | 102 kB 100.6 MB/s eta 0:00:01
-     |████████████████████████████▏   | 112 kB 100.6 MB/s eta 0:00:01
-     |██████████████████████████████▊ | 122 kB 100.6 MB/s eta 0:00:01
-     |████████████████████████████████| 127 kB 100.6 MB/s 
-?25hRequirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;requests_html) (2.10)
-Building wheels for collected packages: fake-useragent, parse
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for fake-useragent (setup.py) ... ?25l?25hdone
-  Created wheel for fake-useragent: filename=fake_useragent-0.1.11-py3-none-any.whl size=13502 sha256=701055c36585879b73e2564dd4e934a06aa0f770079f0ea74f97fec589524bc0
-  Stored in directory: /root/.cache/pip/wheels/ed/f7/62/50ab6c9a0b5567267ab76a9daa9d06315704209b2c5d032031
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for parse (setup.py) ... ?25l?25hdone
-  Created wheel for parse: filename=parse-1.19.0-py3-none-any.whl size=24591 sha256=3ae93fcfa3ed279c8e527ef50f00fcf08d7d10d4ebd8b1e629e311750d08d037
-  Stored in directory: /root/.cache/pip/wheels/9c/aa/cc/f2228050ccb40f22144b073f15a2c84f11204f29fc0dce028e
-Successfully built fake-useragent parse
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: websockets, urllib3, pyee, cssselect, w3lib, pyquery, pyppeteer, parse, fake-useragent, requests-html
-  Attempting uninstall: urllib3
-    Found existing installation: urllib3 1.24.3
-    Uninstalling urllib3-1.24.3:
-      Successfully uninstalled urllib3-1.24.3
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
-<span class=" -Color -Color-Red">google-colab 1.0.0 requires tornado~=5.1.0, but you have tornado 6.2 which is incompatible.</span>
-Successfully installed cssselect-1.1.0 fake-useragent-0.1.11 parse-1.19.0 pyee-8.2.2 pyppeteer-1.0.2 pyquery-1.4.3 requests-html-0.10.0 urllib3-1.25.11 w3lib-2.0.1 websockets-10.3
+Requirement already satisfied: charset-normalizer&lt;3,&gt;=2 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;requests_html) (2.1.1)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests-&gt;requests_html) (2.10)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
@@ -489,19 +400,19 @@ Requirement already satisfied: beautifulsoup4 in /usr/local/lib/python3.7/dist-p
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Collecting BeautifulSoup
-  Downloading BeautifulSoup-3.2.2.tar.gz (32 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting BeautifulSoup
+  Using cached BeautifulSoup-3.2.2.tar.gz (32 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/40/f2/6c9f2f3e696ee6a1fb0e4d7850617e224ed2b0b1e872110abffeca2a09d4/BeautifulSoup-3.2.2.tar.gz#sha256=a04169602bff6e3138b1259dbbf491f5a27f9499dea9a8fbafd48843f9d89970 (from https://pypi.org/simple/beautifulsoup/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
-  Downloading BeautifulSoup-3.2.1.tar.gz (31 kB)
+  Using cached BeautifulSoup-3.2.1.tar.gz (31 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/1e/ee/295988deca1a5a7accd783d0dfe14524867e31abb05b6c0eeceee49c759d/BeautifulSoup-3.2.1.tar.gz#sha256=6a8cb4401111e011b579c8c52a51cdab970041cc543814bbd9577a4529fe1cdb (from https://pypi.org/simple/beautifulsoup/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
-  Downloading BeautifulSoup-3.2.0.tar.gz (31 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/33/fe/15326560884f20d792d3ffc7fe8f639aab88647c9d46509a240d9bfbb6b1/BeautifulSoup-3.2.0.tar.gz#sha256=0dc52d07516c1665c9dd9f0a390a7a054bfb7b147a50b2866fb116b8909dfd37 (from https://pypi.org/simple/beautifulsoup/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
+  Using cached BeautifulSoup-3.2.0.tar.gz (31 kB)
+<span class=" -Color -Color-Yellow">WARNING: Discarding https://files.pythonhosted.org/packages/33/fe/15326560884f20d792d3ffc7fe8f639aab88647c9d46509a240d9bfbb6b1/BeautifulSoup-3.2.0.tar.gz#sha256=0dc52d07516c1665c9dd9f0a390a7a054bfb7b147a50b2866fb116b8909dfd37 (from https://pypi.org/simple/beautifulsoup/). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.</span>
 <span class=" -Color -Color-Red">ERROR: Could not find a version that satisfies the requirement BeautifulSoup (from versions: 3.2.0, 3.2.1, 3.2.2)</span>
 <span class=" -Color -Color-Red">ERROR: No matching distribution found for BeautifulSoup</span>
 </pre></div>
@@ -518,8 +429,8 @@ Collecting BeautifulSoup
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: pandas in /usr/local/lib/python3.7/dist-packages (1.3.5)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2022.4)
 Requirement already satisfied: numpy&gt;=1.17.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (1.21.6)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2022.4)
 Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas) (2.8.2)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.15.0)
 </pre></div>
@@ -602,55 +513,55 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-pack
 <span class="g g-Whitespace">     </span><span class="mi">20</span>         <span class="n">penulis</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//*[@style=&quot;padding:2px 2px 2px 2px;&quot;]&#39;</span><span class="p">,</span> <span class="n">first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/requests/sessions.py</span> in <span class="ni">get</span><span class="nt">(self, url, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">541</span> 
-<span class="g g-Whitespace">    </span><span class="mi">542</span>         <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s1">&#39;allow_redirects&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">543</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">544</span> 
-<span class="g g-Whitespace">    </span><span class="mi">545</span>     <span class="k">def</span> <span class="nf">options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">598</span> 
+<span class="g g-Whitespace">    </span><span class="mi">599</span>         <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;allow_redirects&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">600</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">601</span> 
+<span class="g g-Whitespace">    </span><span class="mi">602</span>     <span class="k">def</span> <span class="nf">options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/requests/sessions.py</span> in <span class="ni">request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">528</span>         <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">529</span>         <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">530</span>         <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">531</span> 
-<span class="g g-Whitespace">    </span><span class="mi">532</span>         <span class="k">return</span> <span class="n">resp</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>         <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>         <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">587</span>         <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> 
+<span class="g g-Whitespace">    </span><span class="mi">589</span>         <span class="k">return</span> <span class="n">resp</span>
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/requests/sessions.py</span> in <span class="ni">send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">641</span> 
-<span class="g g-Whitespace">    </span><span class="mi">642</span>         <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">643</span>         <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">644</span> 
-<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">699</span> 
+<span class="g g-Whitespace">    </span><span class="mi">700</span>         <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">701</span>         <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> 
+<span class="g g-Whitespace">    </span><span class="mi">703</span>         <span class="c1"># Total elapsed time of the request (approximately)</span>
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/requests/adapters.py</span> in <span class="ni">send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">447</span>                     <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">448</span>                     <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">449</span>                     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span>
-<span class="g g-Whitespace">    </span><span class="mi">450</span>                 <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">451</span> 
+<span class="g g-Whitespace">    </span><span class="mi">497</span>                     <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>                     <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">499</span>                     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>                 <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span> 
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">675</span>                 <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">676</span>                 <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="ne">--&gt; </span><span class="mi">677</span>                 <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">678</span>             <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">679</span> 
+<span class="g g-Whitespace">    </span><span class="mi">708</span>                 <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">709</span>                 <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="ne">--&gt; </span><span class="mi">710</span>                 <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">711</span>             <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">712</span> 
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">424</span>                     <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
-<span class="g g-Whitespace">    </span><span class="mi">425</span>                     <span class="c1"># Otherwise it looks like a bug in the code.</span>
-<span class="ne">--&gt; </span><span class="mi">426</span>                     <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">427</span>         <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">,</span> <span class="n">SocketError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">428</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">447</span>                     <span class="c1"># Python 3 (including for exceptions like SystemExit).</span>
+<span class="g g-Whitespace">    </span><span class="mi">448</span>                     <span class="c1"># Otherwise it looks like a bug in the code.</span>
+<span class="ne">--&gt; </span><span class="mi">449</span>                     <span class="n">six</span><span class="o">.</span><span class="n">raise_from</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">450</span>         <span class="k">except</span> <span class="p">(</span><span class="n">SocketTimeout</span><span class="p">,</span> <span class="n">BaseSSLError</span><span class="p">,</span> <span class="n">SocketError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">451</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/urllib3/packages/six.py</span> in <span class="ni">raise_from</span><span class="nt">(value, from_value)</span>
 
 <span class="nn">/usr/local/lib/python3.7/dist-packages/urllib3/connectionpool.py</span> in <span class="ni">_make_request</span><span class="nt">(self, conn, method, url, timeout, chunked, **httplib_request_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">419</span>                 <span class="c1"># Python 3</span>
-<span class="g g-Whitespace">    </span><span class="mi">420</span>                 <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">421</span>                     <span class="n">httplib_response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">422</span>                 <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">423</span>                     <span class="c1"># Remove the TypeError from the exception chain in</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span>                 <span class="c1"># Python 3</span>
+<span class="g g-Whitespace">    </span><span class="mi">443</span>                 <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">444</span>                     <span class="n">httplib_response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span>                 <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">446</span>                     <span class="c1"># Remove the TypeError from the exception chain in</span>
 
 <span class="nn">/usr/lib/python3.7/http/client.py</span> in <span class="ni">getresponse</span><span class="nt">(self)</span>
 <span class="g g-Whitespace">   </span><span class="mi">1371</span>         <span class="k">try</span><span class="p">:</span>
@@ -943,10 +854,10 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-pack
             <p class="prev-next-title">Pendahuluan</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="markdown.html" title="next page">
+    <a class='right-next' id="next-link" href="crawling.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Crawling Data Twitter</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -1,11 +1,8 @@
-# Welcome to your Jupyter Book
+# Pendahuluan
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Apa itu Web Mining?
 
-Check out the content pages bundled with this sample book to see more.
+Web Mining atau Penambangan Web adalah proses untuk menemukan keterkaitan yang tersembunyi dari data web (textual, linkage, atau usage)
 
 ```{tableofcontents}
 ```
